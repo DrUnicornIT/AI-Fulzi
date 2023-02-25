@@ -1,0 +1,51 @@
+---
+---
+
+@font-face {
+	font-family: "ChalkSE";
+	src: url("../.././fonts/2157-font.otf") format("opentype");
+}
+
+strong {
+    color: hsl(4, 90%, 61%);
+}
+
+em {
+    color: hsl(205, 66%, 46%);
+}
+
+a {
+    color: hsl(43, 71%, 67%);
+}
+
+
+$sans-serif-font-family: "ChalkSE";
+$serif-font-family:      "ChalkSE";
+$code-font-family:       "Source Code Pro", monospace;
+
+$body-color:             hsl(32, 55%, 12%);
+$link-color:             hsl(43, 71%, 67%);
+
+$code-background-color:   #d3d0d0;
+$pagination-button-color: #e0e0e0;
+
+$dark-gray-color:        #333;
+$light-gray-color:       #999;
+$extra-light-gray-color: #ccc;
+
+$container-responsive-width: 768px;
+$elements-responsive-width:  30em;
+
+$icon-transition-time: .5s;
+$envelope-color:       #f39c12;
+$twitter-color:        #00aced;
+$instagram-color:      #375989;
+$github-color:         #343434;
+$linkedin-color:       #0073a4;
+$facebook-color:       #3d5b99;
+$pinterest-color:      #bd081c;
+$medium-color:         #00AB6C;
+$codepen-color:        black;
+$rss-color:            #ff6600;
+
+@import "-sections-dir";
