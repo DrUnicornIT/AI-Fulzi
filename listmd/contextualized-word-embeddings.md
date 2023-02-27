@@ -160,4 +160,4 @@ Source code:
 - [Pre-trained BERT contextualized word embeddings](https://colab.research.google.com/drive/1RhmL0BqNe52FEbdSyLpkfVuCZxE7b5ke)
 - [BERT End to End (Fine-tuning + Predicting) with Cloud TPU: Sentence and Sentence-Pair Classification Tasks](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb)
 - [How to code BERT](https://neptune.ai/blog/how-to-code-bert-using-pytorch-tutorial)
-- [Pytorch-imdb-bert](https://github.com/CSCfi/machine-learning-scripts/blob/master/examples/pytorch-imdb-bert.py)
+- [Pytorch-imdb-bert](https://colab.research.google.com/drive/1mXjEDnCgpLISav80xwMsIMxaDHB1P6SH#scrollTo=WCLwqJQhrmAt)
