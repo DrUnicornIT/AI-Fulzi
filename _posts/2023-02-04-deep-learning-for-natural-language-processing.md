@@ -5,7 +5,29 @@ author: "Nguyen Cong"
 categories: NLP, Deep Learning
 tags: [documentation, ai, nlp]
 image: Natural-Language-Processing-NLP-AI.jpg
+toc: true
 ---
+
+# Table of lectures
+
+1. [x] [Introduction](#Introduction)
+2. [x] [Word Embeddings]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[0].url}})
+3. [x] [Contextualized word embeddings]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[1].url}})
+4. [x] [Pre-trainging and fine-tuning]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[2].url}})
+5. [ ] Semantic role labeling
+6. [ ] Coreference resolution
+7. [ ] Semantic parsing
+8. [ ] Reading comprehension
+9. [ ] Open-domain QA
+10. [ ] Relation extraction
+11. [ ] Summarization
+12. [ ] Dialogue
+13. [ ] Task-oriented dialogue
+14. [ ] Bias in language
+15. [ ] Annotation artifacts in NLP
+16. [ ] Adversarial examples
+17. [ ] Interpretability
+18. [ ] General linguistic intelligence
 
 ## Introduction
 
@@ -46,23 +68,3 @@ Prominent problems in exitsting NLP systems:
 - Interpretability
 - Adversarial example
 - General linguistic intelligence
-
-### Table of lectures
-
-1. [x] [Word Embeddings]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[0].url}})
-2. [x] [Contextualized word embeddings]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[1].url}})
-3. [ ] Pre-trainging and fine-tuning
-4. [ ] Semantic role labeling
-5. [ ] Coreference resolution
-6. [ ] Semantic parsing
-7. [ ] Reading comprehension
-8. [ ] Open-domain QA
-9. [ ] Relation extraction
-10. [ ] Summarization
-11. [ ] Dialogue
-12. [ ] Task-oriented dialogue
-13. [ ] Bias in language
-14. [ ] Annotation artifacts in NLP
-15. [ ] Adversarial examples
-16. [ ] Interpretability
-17. [ ] General linguistic intelligence
