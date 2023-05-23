@@ -5,3 +5,4 @@ permalink: /about
 ---
 
 Cont'd ...
+Check out the documentation!
