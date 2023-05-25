@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "562556879571f39b",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f1a8066a76781f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a36d95822ff84521",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "listmd/contextualized-word-embeddings.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "50261f89de1f5a0a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2981641d88fc3d0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "99589cbb0e13b31e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1e4f7fd1922f5f60",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "369ec533124e70eb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "99c0bd17c5199102",
+    "type": "split",
+    "children": [
+      {
+        "id": "986e47f6acdde9ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26a129d5f7029565",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "listmd/contextualized-word-embeddings.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0988be0e0cad2218",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "listmd/contextualized-word-embeddings.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6752442efae4ce41",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5ca994bf85044c0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "listmd/contextualized-word-embeddings.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "a36d95822ff84521",
+  "lastOpenFiles": [
+    "assets/img/Encoder-Decoder Framework.png",
+    "listmd/contextualized-word-embeddings.md",
+    "{{.md",
+    "_posts/2023-02-04-deep-learning-for-natural-language-processing.md"
+  ]
+}
