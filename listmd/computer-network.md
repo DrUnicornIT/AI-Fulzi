@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computer-NetWork
-permalink: uetcourse/computer-network
+permalink: courseuet/computer-network
 ---
 
 ## Exam

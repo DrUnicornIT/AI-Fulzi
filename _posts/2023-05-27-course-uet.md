@@ -9,5 +9,5 @@ toc: true
 ---
 
 # List of courses
-- [ ] Công Nghệ Phần Mềm 
-- [ ] Mạng Máy Tính
+
+- [x] [Mạng Máy Tính]({{ site.github.url }}/{{site.data.settings.listmd.courseuet[0].url}})
