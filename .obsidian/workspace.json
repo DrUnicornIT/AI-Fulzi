@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listmd/computer-network.md"
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md"
               }
             }
           }
@@ -151,6 +151,10 @@
     "assets/css/syntax.css",
     "assets/css/main.scss",
     "assets/css",
+    "listmd/computer-network.md",
+    "assets/img/favicon-32x32.png",
+    "assets/img/Course-UET.png",
+    "_posts/2023-05-27-course-uet.md",
     "_site/deep-learning-for-natural-language.html",
     "_posts/2023-02-10-deep-learning-for-natural-language.md",
     "_site/deep-learning-for-natural-language-processing-copy.html",
@@ -166,16 +170,11 @@
     "_site/assets/img/apple-touch-icon.png",
     "assets/img/apple-touch-icon.png",
     "_site/assets/img/favicon-32x32.png",
-    "assets/img/favicon-32x32.png",
     "_site/assets/img/Course-UET.png",
-    "assets/img/Course-UET.png",
     "_site/assets/img/logo-new.png",
     "assets/img/logo-new.png",
     "_site/course-uet.html",
-    "_site/uetcourse/computer-network.html",
     "_posts/2023-27-05-course-uet.md",
-    "_posts/2023-05-27-course-uet.md",
-    "listmd/computer-network.md",
     "listmd/contextualized-word-embeddings.md",
     "assets/img/Encoder-Decoder Framework.png",
     "listmd/pre-trainging-and-fine-tuning.md",
