@@ -10,4 +10,4 @@ toc: true
 
 # List of courses
 
-- [x] [Word Embeddings]({{ site.github.url }}/{{site.data.settings.listmd.ainlp[0].url}})
+- [x] [Mạng Máy Tính]({{ site.github.url }}/{{site.data.settings.listmd.courseuet[0].url}})
