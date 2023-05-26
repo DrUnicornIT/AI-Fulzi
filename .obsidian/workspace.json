@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
+                "file": "listmd/computer-network.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
+                "file": "listmd/computer-network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
+                "file": "listmd/computer-network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md"
+                "file": "listmd/computer-network.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "a36d95822ff84521",
   "lastOpenFiles": [
+    "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
     "_site/courseuet/computer-network.html",
     "_site/courseuet",
     "_posts/2023-05-28-course-uet.md",
@@ -168,7 +169,6 @@
     "_site/uetcourse",
     "_posts/2023-27-05-course-uet.md",
     "_posts/2023-05-27-course-uet.md",
-    "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
     "listmd/computer-network.md",
     "listmd/contextualized-word-embeddings.md",
     "assets/img/Encoder-Decoder Framework.png",
