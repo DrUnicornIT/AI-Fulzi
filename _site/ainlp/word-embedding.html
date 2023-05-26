@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+  <head>
+  <title>
+    
+      Word Embeddings | AI BLOG
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="AI BLOG" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="AI BLOG | with DrUnicorn"/>
+  //-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      });
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-112060364-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Word Embeddings | AI BLOG</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Word Embeddings" />
+<meta name="author" content="DrUnicorn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="with DrUnicorn" />
+<meta property="og:description" content="with DrUnicorn" />
+<link rel="canonical" href="http://localhost:4000/ainlp/word-embedding" />
+<meta property="og:url" content="http://localhost:4000/ainlp/word-embedding" />
+<meta property="og:site_name" content="AI BLOG" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Word Embeddings" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DrUnicorn"},"description":"with DrUnicorn","headline":"Word Embeddings","url":"http://localhost:4000/ainlp/word-embedding"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <h3 class="header-title">
+    <a href="/">AI BLOG</a>
+    <small class="header-subtitle">with DrUnicorn</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/about.html">About</a>
+    
+      <a href="/writing.html">Writing</a>
+    
+      <a href="/contact.html">Contact</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+      <div class="content-container">
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<h1>
+  Word Embeddings
+</h1>
+<article>
+  <h2 id="overview">Overview</h2>
+
+<ul>
+  <li>(Nikolov et al, 2013) <a href="https://proceedings.neurips.cc/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf">Distributed Representation of Words and Phrases and their Compositionality</a></li>
+  <li>(Baroni et al, 2014) <a href="https://aclanthology.org/P14-1023.pdf">Don’t count, predict! A systematic comparison of context-counting vs context-predicting semantic vectors</a></li>
+</ul>
+
+<h2 id="distributed-representations-of-words">Distributed representations of words</h2>
+
+<p>Using in a vector space help learning algorithms to achieve better performance in natural language processing (NLP) tasks by grouping similar words.</p>
+
+<p>The word representations computed using neural networks are very interesting because the learned vectors explicily encode many linguistic regularities and patterns.</p>
+
+<p>For example, the result of a vector calculation:</p>
+
+<blockquote>
+  <p>Vec(“Paris”) - Vec(“France”) + vec(“VietNam”) is closer to vec(“HaNoi”)</p>
+</blockquote>
+
+<p>Linguistic regularities<br />
+<img src="/assets/img/Linguistic regularities.png" alt="alt text" title="Linguistic regularities" /></p>
+
+<h2 id="distributional-hypothesis">Distributional hypothesis</h2>
+
+<p>Distributiona hypothesis: words that occur in similar cotexts tend to have similar meanings
+J.R.Firth 1957</p>
+
+<ul>
+  <li>You shall know a word by the company it keeps</li>
+  <li>One of the most successful ideas of modern statistical NLP</li>
+</ul>
+
+<h2 id="lantent-semantic-analysis">Lantent Semantic Analysis</h2>
+
+<p>(<a href="https://www.sciencedirect.com/topics/engineering/singular-value-decomposition">SVD-based methods</a>)
+LSA is a technique in NLP, in particular distributional semantics, of analyzing relationships between a set of documents and the terms they contain by producing a set of concepts related to the docments and terms. LSA assumes that words that are close in meaning will occur in similar pieces of text (Distributional hypothesis) - <em>wikikipedia</em></p>
+
+<p><img src="/assets/img/LSA.png" alt="alt text" title="LSA" /></p>
+
+<h2 id="collobert--weston-vectors">Collobert &amp; Weston vectors</h2>
+
+<p><strong>Idea:</strong> a word and its context is a positive training sample; a random word in that sample context gives a negative training sample:</p>
+
+<blockquote>
+  <p>Score(cat chills on a mat) &gt; Score(cat chills Ohio a mat)</p>
+</blockquote>
+
+<h2 id="the-skip-gram-model">The Skip-Gram Model</h2>
+
+<ul>
+  <li>The idea: we want to use words to predict their context words.</li>
+  <li>Context: a fixed windown of size 2m</li>
+</ul>
+
+<p><img src="/assets/img/PSkipgram.png" alt="alt text" title="PSkipgram" /></p>
+
+<p>More formally, given a sequence of training words, the objective of the <a href="https://aegis4048.github.io/demystifying_neural_network_in_skip_gram_language_modeling">Skip-gream model</a> is</p>
+
+\[\frac{1}{T} \sum_{t=1}^{T} \sum_{-c\leq j \leq c, j \neq 0} log P(w_{t+j}|w_t)\]
+
+<h2 id="how-to-define-pw_tjw_t">How to define $P(w_{t+j}|w_t)$</h2>
+
+<p>We have two sets of vectors for each word in the vocabulary</p>
+
+<ul>
+  <li>\(u_i \in R^d\): embedding for center word i</li>
+  <li>\(v_{i'} \in R^d\): embedding for context word i’</li>
+</ul>
+
+<p>Use inner product $u_i . v_{i’}$ to measure how likely word i appears with context word i’, the larger the better
+\(P(w_{t+j}|w_t) = \frac{exp(u_{w_t}.v_{w_{t+j}})}{\sum{k \in V}exp(exp(u_{w_t}.v_{k})}\)</p>
+
+<h2 id="hierarchical-softmax">Hierarchical softmax</h2>
+
+<p><img src="/assets/img/Hierarchical softmax.png" alt="alt text" title="Hierarchical softmax" /></p>
+
+<h2 id="negative-sampling--nce">Negative sampling &amp; NCE</h2>
+
+<p>An alternative to the hierarchical softmax is Noise Contrastive Estimation (NCE), NCE posits that a good model should be able to differentiate data from noise by means of logistic regression.</p>
+
+<h2 id="subsampling-of-frequent-words">Subsampling of Frequent Words</h2>
+
+<p>In very large corpora, the most frequent words can easily occur hundreds of millions of times (e.g., “in”, “the”, and “a”). Such words usually provide less information value than the rare words. For example, while the Skip-gram model benefits from observing the co-occurrences of “France” and “Paris”, it benefits much less from observing the frequent co-occurrences of “France” and “the”, as nearly every word co-occurs frequently within a sentence with “the”. This idea can also be applied in the opposite direction; the vector representations of frequent words do not change significantly after training on several million examples.</p>
+
+<p>Probability of discarding a word:</p>
+
+\[P(w_i) = 1 - \sqrt{\frac{t}{f(w_i)}} (t=1e-5)\]
+
+<h2 id="learning-phrases">Learning phrases</h2>
+
+<p>“New York Time” != “New” + “York” + “Times”<br />
+“Air Canada” != “Air” + “Canada”</p>
+
+<p>A simple data-drive approach to celect pharases:
+\(score(w_i, w_j) = \frac{count(w_iw_j)-\delta}{count(w_i)\times count(w_j)}\)
+![[Learning phrases.png]]</p>
+
+<h2 id="dont-count-predict">Don’t count, predict</h2>
+
+<ul>
+  <li>A systematic comparative evaluation of count and predict vectors</li>
+  <li>Main result: predict vectors » count vectors</li>
+</ul>
+
+<h2 id="count-vs-predict-models">Count vs predict models</h2>
+
+<ul>
+  <li>“Count” models: collect raw co-occurrence counts in a corpus, and transform them into vectors with dimensionality reduction (and reweighting)</li>
+  <li>“Predict” models: estimate the word vectors directly by maximizing the probability of the contexts in which the word in observed in the corpus</li>
+</ul>
+
+<h2 id="semantic-relatedness">Semantic relatedness</h2>
+
+<p>Similarity vs relatedness:</p>
+
+<ul>
+  <li>“car” vs “vechicle”</li>
+  <li>“car” vs “journey”</li>
+</ul>
+
+<p>Compare thecorrelation between the average scores that human subjects assigned to the pairs and cosine similarity between corresponding vectors</p>
+
+<h2 id="synonym-detection">Synonym detection</h2>
+
+<p>TOEFL test</p>
+
+<ul>
+  <li>levied: <em>imposed</em>, believed, requested, correlated</li>
+</ul>
+
+<h2 id="concept-categorization">Concept categorization</h2>
+
+<ul>
+  <li>“elephants” -&gt; “mammal</li>
+</ul>
+
+<h2 id="selectional-preferences">Selectional preferences</h2>
+
+<p>Paper: <a href="https://aclanthology.org/J13-3006.pdf">Selectional Preferences for Semantic Role Classification</a></p>
+
+<p>Verb-noun pairs
+Sample:</p>
+
+<ul>
+  <li>Smith was assassinated in Texas</li>
+  <li>Smith was assassinated in December</li>
+</ul>
+
+</article>
+
+      </div>
+      <footer class="footer">
+  
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="footer-description"><a href="/">AI BLOG | with DrUnicorn by DrUnicorn</a></div>
+</footer>
+
+    </div>
+  </body>
+</html>

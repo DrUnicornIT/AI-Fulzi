@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+  <head>
+  <title>
+    
+      Contextualized word embeddings | AI BLOG
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="AI BLOG" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="AI BLOG | with DrUnicorn"/>
+  //-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      });
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-112060364-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Contextualized word embeddings | AI BLOG</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Contextualized word embeddings" />
+<meta name="author" content="DrUnicorn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="with DrUnicorn" />
+<meta property="og:description" content="with DrUnicorn" />
+<link rel="canonical" href="http://localhost:4000/ainlp/contextualized-word-embeddings" />
+<meta property="og:url" content="http://localhost:4000/ainlp/contextualized-word-embeddings" />
+<meta property="og:site_name" content="AI BLOG" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contextualized word embeddings" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DrUnicorn"},"description":"with DrUnicorn","headline":"Contextualized word embeddings","url":"http://localhost:4000/ainlp/contextualized-word-embeddings"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <h3 class="header-title">
+    <a href="/">AI BLOG</a>
+    <small class="header-subtitle">with DrUnicorn</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/about.html">About</a>
+    
+      <a href="/writing.html">Writing</a>
+    
+      <a href="/contact.html">Contact</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+      <div class="content-container">
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<h1>
+  Contextualized word embeddings
+</h1>
+<article>
+  <h2 id="overview">Overview</h2>
+
+<ul>
+  <li>Papers: OpenAI GPT/BERT</li>
+  <li>(McCann et al, NIPS’2017) <a href="https://proceedings.neurips.cc/paper/2017/file/20c86a628232a67e7bd46f76fba7ce12-Paper.pdf">Learned in translation: contextualized word vectors</a></li>
+  <li>(Peters et al, NAACL’2018) <a href="https://arxiv.org/pdf/1802.05365.pdf">Deep contextuatualized word representations</a></li>
+</ul>
+
+<h2 id="limitations-of-word2vec">Limitations of word2vec</h2>
+
+<ul>
+  <li>One vector for each word type<br />
+\(v(bank)=(-0.224, 0.130, -0.290, 0.276)\)</li>
+  <li>Polysemous words:
+    <ul>
+      <li>mouse: .. a mouse controlling a computer system in 1968.</li>
+      <li>mouse: .. a quiet animal like a mouse</li>
+      <li>bank: … a bank can hold the investments in a custodial account ..</li>
+      <li>bank: … as agriculture burgeons on the east bank, the river …</li>
+    </ul>
+  </li>
+  <li>Words don’t appear in isolation. The word use (eg. syntax and semantics) depends on its context. Why not learn the representations for each word in its context?</li>
+</ul>
+
+<h2 id="contextualized-word-embeddings">Contextualized word embeddings</h2>
+
+<p>Build a vectorr for each word conditioned on its context<br />
+= representation for each token is a function of the entire input sentence</p>
+
+<p><img src="/assets/img/Contextualized word embeddings.png" alt="alt text" title="Contextualized word embeddings" /></p>
+
+<p>Compute contextualk vector:</p>
+
+\[c_k = f(w_k|w_1, w_2, ..., w_n) \in R^d\]
+
+\[f(play|Elmo~and~Cookie~Monster~play~a~game) \neq f(play | he~Broadway~play~premiered~yesterday)\]
+
+<h2 id="context-vectors-cove">Context Vectors (CoVe)</h2>
+
+<p>We transfer what is learned by the MT-LSTM to downstream tasks by treating the outputs of the MT-LSTM as context vectors. If w is a sequence of words and GloVe(w) the corresponding sequence of word vectors produced by the GloVe model</p>
+
+\[CoVe(w) = MT-LSTM(GloVe(w))\]
+
+<h2 id="sequence-to-sequence-seq2seq-and-attention">Sequence to Sequence (seq2seq) and Attention</h2>
+
+<p>Paper: <a href="https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html">Sequence to Sequence Basics</a></p>
+
+<p>The most popular sequence to sequence task is translation: usually from one natural language to another.</p>
+
+<h3 id="sequence-to-sequence-basic">Sequence to Sequence basic</h3>
+
+<p>Input sequence $x_1, x_2, .. x_m$<br />
+Output sequence $y_1, y_2, …, y_n$</p>
+
+<p><img src="/assets/img/Seq2seq.png" alt="alt text" title="Seq2seq" /></p>
+
+<h3 id="encoder-decoder-framework">Encoder-Decoder Framework</h3>
+
+<p>Encoder-decoder is the standard modeling paradigm for seq2seq tasks. This framework consists of two components:</p>
+
+<ul>
+  <li>Encoder - reads source sequence and produces its representation:</li>
+  <li>Decode - uses source representation from the encoder to generate the target sequence
+![[Encoder-Decoder Framework.png]]</li>
+</ul>
+
+<h3 id="conditional-language-models">Conditional Language Models</h3>
+
+<p>Language Models:
+\(P(y_1, y_2, ..., y_n = \prod{n}_{t=1}p(y_t|y_{&lt;t})\)<br />
+Conditional Language Models:
+\(P(y_1, y_2, ..., y_n = \prod{n}_{t=1}p(y_t|y_{&lt;t})\)</p>
+
+<p>Since the only difference from LMs is the presence of cource x, the modeling and training is very similar to language models. In particular, the high-level pipeline is as follows:</p>
+
+<ul>
+  <li>feed source and previously generated target words into a network;</li>
+  <li>get vector representation of context (both source and previous target) from the networds decoder;</li>
+  <li>from this vector representation, predict a probability distribution for the next token.</li>
+</ul>
+
+<p><img src="/assets/img/CLMs.png" alt="alt text" title="CLMs" /></p>
+
+<h3 id="the-simplest-model-two-rnns-for-encoder-and-decoder">The Simplest Model: Two RNNs for Encoder and Decoder</h3>
+
+<p><img src="/assets/img/2RNNs.png" alt="alt text" title="2RNNs" /></p>
+
+<p>The simplest encoder-decoder model consists of two RNNs (LSTMs): one for the encode and another for the decoder. Encoder RNN reads the source sentence, and the final state is used as the initial state of the decoder RNN. The hope is that the final encoder state “encodes” all information about the source, and the decoder can generate the target sentence based on this vector.</p>
+
+<h2 id="elmo">ELMo</h2>
+
+<ul>
+  <li>Train a forward LSTM-based LM and a backward LSTM-based LM on some large corpus</li>
+  <li>Use the hidden states of the LSTMs for each token to compute a vector representation of each word</li>
+</ul>
+
+<h3 id="elmo--bidirectional-lstms">ELMo != bidirectional LSTMs</h3>
+
+<ul>
+  <li>Essentially two LSTMs in different directions</li>
+</ul>
+
+<p><img src="/assets/img/ELMo.png" alt="alt text" title="ELMo" /></p>
+
+<h3 id="how-to-use-elmo">How to use ELMo</h3>
+
+<ul>
+  <li>Plug ELMo into any NLP model: freeze all the LMs weights and change the input representation to:
+\([x_k; ELMo_{k}^{task}]\)</li>
+  <li>Could also insert ELMo into higher laers (will discuss soon)</li>
+</ul>
+
+<h3 id="evaluation">Evaluation</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SQuaAD: question answering</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SNLI: textual entailment</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />SRL: semantic role labeling</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Coref: coreference resolution</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />NER: named entity recognition</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SST-5: sentiment analysis</li>
+</ul>
+
+<h2 id="bidirectional-encoder-representations-form-transformer-bert">Bidirectional Encoder Representations form Transformer (Bert)</h2>
+
+<p>Document: <a href="https://jalammar.github.io/illustrated-bert/">illustrated-bert</a>, <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT: Pre-training of DBTLU</a></p>
+
+<p>BERT brought everythink together to build a bidirectional transformer-based language model using endcoders rather than decoders
+They emplayed masked language modeling. In other words, they hid 15% of the words and used their position information to infer them.
+Finally, they also mixed it up a littele bit to make the learning process more effective</p>
+
+<p>Example: Sentence Classification
+The most straight-forward way to use BERT is to use it to classify a single piece of text. This model would book like this:</p>
+
+<p><img src="/assets/img/Bert sentence classification.png" alt="alt text" title="Bert sentence classification" /></p>
+
+<p>In fact, BERT developers created two main models:</p>
+
+<ol>
+  <li>The BASE:
+    <ul>
+      <li>Number of transformer blocks (L): 12</li>
+      <li>Hidden layer size (H): 768</li>
+      <li>Attention heads(A): 12</li>
+    </ul>
+  </li>
+  <li>The LARGE:
+    <ul>
+      <li>Number of transformer blocks (L): 24</li>
+      <li>Hidden layer size (H): 1024</li>
+      <li>Attention heads (A): 16</li>
+    </ul>
+  </li>
+</ol>
+
+<p>I will be using the BASE model
+BERT’s architecture looks like this:</p>
+
+<p><img src="/assets/img/BERT's architecture.png" alt="alt text" title="BERT's architecture" /></p>
+
+<p>Each encoder block encapsulates a more sophisticated model architecture.</p>
+
+<p>The special tokens that BERT authors used for fine-tuning and specific task training.</p>
+
+<ol>
+  <li>{CLS}: The first token of every sequence. A classification token which is normally used in conjunction with a softmax layer for classification tasks. For anything else, it can be safely ignored.</li>
+  <li>{SEP}: A sequence delimiter token which was used at pre-training for sequence-pair tasks (i.e. Next entence prediction). Must be used when sequence pair tasks are required. When a single sequence is used it is just appended at the end.</li>
+  <li>{MASK}: Token used for masked words. Only used for pre-training.</li>
+</ol>
+
+<p>The input format that BERT expects is illustrated below:</p>
+
+<p><img src="/assets/img/Input-format-BERT.png" alt="alt text" title="Input-format-BERT" /></p>
+
+<p>The <strong>input layer</strong> is simply the vector of the sequence tokens along with the special tokens. The “##ing” token in thae example above may raise some eyebrows so to clarify, BERT utilizes <em>WordRiece</em> for tokenization which in effect, splits token like “playing” to “play” and “##ing”. This is mainly to vover a wider spectrum of Out-Of-Vocabulary (OOV) words.</p>
+
+<p><strong>Token embeddings</strong> are the vocabulary IDs for each of the tokens.
+<strong>Sentence Embeddings</strong> is just a numeric class to distinguish between sentence A and B.
+<strong>Transformer positional embeddings</strong> indicate the position of each word in the sequence.</p>
+
+<p>Source code:</p>
+
+<ul>
+  <li><a href="https://colab.research.google.com/drive/1RhmL0BqNe52FEbdSyLpkfVuCZxE7b5ke">Pre-trained BERT contextualized word embeddings</a></li>
+  <li><a href="https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb">BERT End to End (Fine-tuning + Predicting) with Cloud TPU: Sentence and Sentence-Pair Classification Tasks</a></li>
+  <li><a href="https://neptune.ai/blog/how-to-code-bert-using-pytorch-tutorial">How to code BERT</a></li>
+  <li><a href="https://github.com/CSCfi/machine-learning-scripts/blob/master/examples/pytorch-imdb-bert.py">Pytorch-imdb-bert</a></li>
+</ul>
+
+</article>
+
+      </div>
+      <footer class="footer">
+  
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="footer-description"><a href="/">AI BLOG | with DrUnicorn by DrUnicorn</a></div>
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -59,7 +59,7 @@ Encoder-decoder is the standard modeling paradigm for seq2seq tasks. This framew
 
 - Encoder - reads source sequence and produces its representation:
 - Decode - uses source representation from the encoder to generate the target sequence
-  ![alt text](../assets/img/Encoder-Decoder%20Framework.png)
+  ![[Encoder-Decoder Framework.png]]
 
 ### Conditional Language Models
 

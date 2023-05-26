@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-24T03:34:20+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI BLOG</title><subtitle>with DrUnicorn</subtitle><author><name>DrUnicorn</name></author><entry><title type="html">Deep learning for Natural Language Processing</title><link href="http://localhost:4000/deep-learning-for-natural-language-processing" rel="alternate" type="text/html" title="Deep learning for Natural Language Processing" /><published>2023-02-04T00:00:00+07:00</published><updated>2023-02-04T00:00:00+07:00</updated><id>http://localhost:4000/deep-learning-for-natural-language-processing</id><content type="html" xml:base="http://localhost:4000/deep-learning-for-natural-language-processing"><![CDATA[<h1 id="table-of-lectures">Table of lectures</h1>
+
+<ol class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="#Introduction">Introduction</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="/ainlp/word-embedding.html">Word Embeddings</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="/ainlp/contextualized-word-embeddings.html">Contextualized word embeddings</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="/ainlp/pre-trainging-and-fine-tuning">Pre-trainging and fine-tuning</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Semantic role labeling</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Coreference resolution</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Semantic parsing</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Reading comprehension</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open-domain QA</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Relation extraction</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Summarization</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dialogue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Task-oriented dialogue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Bias in language</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Annotation artifacts in NLP</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adversarial examples</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Interpretability</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />General linguistic intelligence</li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Topic: <a href="https://www.mitpressjournals.org/doi/pdfplus/10.1162/COLI_a_00239">Computational Linguistics and Deep Learning</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Knowledge to keep in mind
+</code></pre></div></div>
+
+<ul>
+  <li>Deep Learning for NLP</li>
+  <li>Mostly problem-driven</li>
+  <li>Focused on English NLP</li>
+</ul>
+
+<h3 id="textbook">Textbook</h3>
+
+<ul>
+  <li><a href="https://web.stanford.edu/~jurafsky/slp3/">Introduction to Natural Language Processing</a></li>
+  <li><a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Speech and Language Processing</a></li>
+</ul>
+
+<h3 id="how-to-read-papers">How to read papers</h3>
+
+<ul>
+  <li>Read the papers in context
+    <ul>
+      <li>All the papaers are built on top of other papers</li>
+    </ul>
+  </li>
+  <li>Grasp the key ideas
+    <ul>
+      <li>What is the biggest contribution of this paper</li>
+      <li>Why is this paper important?</li>
+    </ul>
+  </li>
+  <li>Pay attention to the details (both methodology and experiments)</li>
+</ul>
+
+<h3 id="topics-of-interest">Topics of Interest</h3>
+
+<p>NLP problems at different levels:</p>
+
+<ul>
+  <li><strong>Linguistic levels</strong>: (speech), words, syntax, semantics</li>
+  <li><strong>Intermediate tasks/tools</strong>: parts-of-speech, entities, parsing, coreference</li>
+  <li><strong>Full applications</strong>: sentiment analysis, question answering, dialogue, text summarization, machine translation</li>
+</ul>
+
+<p>Prominent problems in exitsting NLP systems:</p>
+
+<ul>
+  <li>Bias in language data</li>
+  <li>Annotation artifacts</li>
+  <li>Interpretability</li>
+  <li>Adversarial example</li>
+  <li>General linguistic intelligence</li>
+</ul>]]></content><author><name>Nguyen Cong</name></author><category term="NLP," /><category term="Deep" /><category term="Learning" /><category term="documentation" /><category term="ai" /><category term="nlp" /><summary type="html"><![CDATA[Table of lectures]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/Natural-Language-Processing-NLP-AI.jpg" /><media:content medium="image" url="http://localhost:4000/Natural-Language-Processing-NLP-AI.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

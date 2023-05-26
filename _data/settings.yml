@@ -17,8 +17,6 @@ listmd:
         name: "Improving language understanding by Generative Pre-Training",
         url: "ainlp/pre-trainging-and-fine-tuning",
       }
-  courseuet:
-    - { name: "Course UET", url: "courseuet/computer-network.html" }
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:

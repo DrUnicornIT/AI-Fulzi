@@ -1,0 +1,815 @@
+<!doctype html>
+<html>
+  <head>
+  <title>
+    
+      Improving language understanding by Generative Pre-Training | AI BLOG
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="AI BLOG" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="AI BLOG | with DrUnicorn"/>
+  //-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      });
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-112060364-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Improving language understanding by Generative Pre-Training | AI BLOG</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Improving language understanding by Generative Pre-Training" />
+<meta name="author" content="DrUnicorn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="with DrUnicorn" />
+<meta property="og:description" content="with DrUnicorn" />
+<link rel="canonical" href="http://localhost:4000/ainlp/pre-trainging-and-fine-tuning" />
+<meta property="og:url" content="http://localhost:4000/ainlp/pre-trainging-and-fine-tuning" />
+<meta property="og:site_name" content="AI BLOG" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving language understanding by Generative Pre-Training" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DrUnicorn"},"description":"with DrUnicorn","headline":"Improving language understanding by Generative Pre-Training","url":"http://localhost:4000/ainlp/pre-trainging-and-fine-tuning"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+  <h3 class="header-title">
+    <a href="/">AI BLOG</a>
+    <small class="header-subtitle">with DrUnicorn</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/about.html">About</a>
+    
+      <a href="/writing.html">Writing</a>
+    
+      <a href="/contact.html">Contact</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+      <div class="content-container">
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<h1>
+  Improving language understanding by Generative Pre-Training
+</h1>
+<article>
+  <h2 id="motivation">Motivation</h2>
+
+<ul>
+  <li>Semi-supervised learning: embeddings
+    <ul>
+      <li>Unsupervised learning of word-level or phrase-level stats
+        <ul>
+          <li>E.g: Word embeddings, ELMo Vectors</li>
+        </ul>
+      </li>
+      <li>Supervised training using these word-level features
+        <ul>
+          <li>ELMo Example:
+            <ul>
+              <li>Question Answering: Add ELMo to modified BiDAF model</li>
+              <li>Textual Entailment: Add ELMo to ESIM sequence model</li>
+              <li>Coreference Resolution: Add ELMo to end-to-end span-based neural model</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="elmo-different-models-for-each-task">ELMo: Different Models for Each Task</h2>
+
+<ul>
+  <li>Question Answering</li>
+  <li>Textual Entailment</li>
+  <li>Coreference Resolution</li>
+</ul>
+
+<p><img src="/assets/img/Different Models for Each Task.png" alt="alt text" title="Different Models for Each Task" /></p>
+
+<h2 id="generative-pre-training-gpt">Generative Pre-Training (GPT)</h2>
+
+<ul>
+  <li>Single Model: Transformers
+    <ul>
+      <li>Make longer-distance connections</li>
+      <li>Faster training</li>
+    </ul>
+  </li>
+  <li>Unsupervised pre-training
+    <ul>
+      <li>Similar objective as Word2Vec</li>
+      <li>Predict context words</li>
+    </ul>
+  </li>
+  <li>Supervised fine-tuning
+    <ul>
+      <li>Use pre-trained model</li>
+      <li>Only swap the last layer</li>
+    </ul>
+  </li>
+  <li>Takeaways
+    <ul>
+      <li>Apply one pre-trained model to many tasks</li>
+      <li>BPE Tokens</li>
+      <li>Pre-trained Transformers learn something, even with no supervision</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transformer">Transformer</h2>
+
+<p><img src="/assets/img/Transformer.png" alt="alt text" title="Transformer" /></p>
+
+<h2 id="transformer-encoder-and-decoder">Transformer Encoder and Decoder</h2>
+
+<p><img src="/assets/img/Transformer Encoder.png" alt="alt text" title="Transformer Encoder" /></p>
+
+<p>Transformer is more efficient than LSTM because it lends itself to parallelization.</p>
+
+<h2 id="self-attention">Self-Attention</h2>
+
+<p>Illustratede: Selfl-Attention</p>
+
+<blockquote>
+  <p>What do BERT, RoBERT, ALBERT, SpanBERT, DistilBERT, SesameeBERT, SemBERT, SciBERT, BioBERT, MobileBERT, TinyBERT and CamemBERT all have in common?</p>
+</blockquote>
+
+<p><strong>Self-attention</strong>. We are not only talking abuout architectures bearing the name “BERT” but, more correctly, <em>Transformer-based</em> architectures. Transformer-based architectures, which are primarily used in modelling language understanding tasks, eschew recurrence in neural networks and instead trust entirely on <strong>self-attention</strong> mechanisms to draw global dependencies between inputs and outputs.
+<img src="/assets/img/Sefl-attention.png" alt="alt text" title="Sefl-attention" /></p>
+
+<h3 id="selfattention-in-detail">SelfAttention in Detail</h3>
+
+<p>Multiplyiing $x_1$ by the $WQ$ weight matrix produces $q_1$, the “query” vector associated with that word. We end up creating a “query”, a “key”, and a “value” projection aof each word in the input sentence</p>
+
+<p><img src="/assets/img/SelfAttention in Detail.png" alt="alt text" title="Sefl-attention in Detail" />
+<img src="/assets/img/SelfAttention in Detail 2.png" alt="alt text" title="Sefl-attention in Detail" /></p>
+
+<h2 id="transformers">Transformers</h2>
+
+<p>The Transformer - model architecture
+<img src="/assets/img/The Transformer - model architecture.png" alt="alt text" title="The Transformer - model architecture" /></p>
+
+<h2 id="gpt-framework">GPT Framework</h2>
+
+<p>Generative Pre-trained Transformer (GPT) is an autoregressive language model</p>
+
+<ul>
+  <li>Multi-layer Transformer decoder
+    <ul>
+      <li>$h_0 = UW_e + W_p$</li>
+      <li>$h_1 = transformerblock(h_{l-1}) ~\forall i \in [1, n]$</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="unsuperised-pre-training">Unsuperised Pre-Training</h2>
+
+<ul>
+  <li>Similar objective as Word2Vec</li>
+  <li>Given tokens u, maximize:<br />
+$L_1(U) = \sum_i logP(u_i|u_{i-k},…, u_{i-1};\Theta)$<br />
+$P(u) = softmax(h_nW^T_e)$</li>
+  <li>k is context window size</li>
+  <li>$h_nW^T_e$ is score for each word</li>
+  <li>softmax gives probabiltity distribution</li>
+</ul>
+
+<h2 id="supervised-fine-tuning">Supervised Fine-Tuning</h2>
+
+<ul>
+  <li><strong>Keep the pre-trained Transformers</strong></li>
+  <li>Replace the final linear layer</li>
+  <li>Datainputs x, label y</li>
+  <li>Maximize<br />
+$L_2(C) = \sum_(x, y)logP(y|x^1, .., x^m)$<br />
+$P(y|x^1, .. x^m) = softmax(h^m_lW_y)$<br />
+$L_3(C) = L_2(C) + \lambda * L_1(C)$</li>
+</ul>
+
+<h2 id="task-overviews">Task Overviews</h2>
+
+<ul>
+  <li>Classification (e.g. sentiment analysis)
+    <ul>
+      <li>Given a piece of text, is it positive or negative?</li>
+      <li>Answers: “Yes”, “No”</li>
+      <li>Answers: “Very positive”, “Positive”, “Neutral”, “Negative”, “Very negative”</li>
+    </ul>
+  </li>
+  <li>Entailment
+    <ul>
+      <li>Given a premise <strong>p</strong> and a hypothesis <strong>h</strong>, does <strong>p</strong> imply <strong>h</strong>?</li>
+      <li>Answers: “entailment”, “contradiction”, or “neutral”</li>
+    </ul>
+  </li>
+  <li>Similarity
+    <ul>
+      <li>Are two sentences semantically equivalent?</li>
+      <li>Answers: “Yes”, “No”</li>
+    </ul>
+  </li>
+  <li>Multiple Choice (e.g Story Cloze)
+    <ul>
+      <li>Given a short story and two sentences, which is the sentence that ends the story?</li>
+      <li>Given a passage and a question, and some multiple-choice answers, which is the answer?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="task-specific-adaptations">Task-Specific Adaptations</h2>
+
+<ul>
+  <li>Special start token</li>
+  <li>Special delimiter token</li>
+  <li>Special end token</li>
+  <li>Softmax</li>
+  <li>Task-specific</li>
+  <li>Pre-trained
+<img src="/assets/img/Task-Specific Adaptations.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="experiments">Experiments</h2>
+
+<ul>
+  <li>Books Corpus for unsupervised training
+    <ul>
+      <li>About the same size as 1B Word Benchmark (used for ELMo)</li>
+      <li><strong>Preserves longer structure</strong></li>
+    </ul>
+  </li>
+  <li>Model
+    <ul>
+      <li>12-layer transformer network</li>
+    </ul>
+  </li>
+  <li>Returns strong results on most tasks, especially question answering and commonsense reasoning</li>
+</ul>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<ul>
+  <li><strong>Few new parameters</strong> for each supervised task
+    <ul>
+      <li>One linear layer, plus delimiter embedding</li>
+    </ul>
+  </li>
+  <li>Transformers
+    <ul>
+      <li>Allow long-term dependencies to be made</li>
+      <li>Faster to train</li>
+    </ul>
+  </li>
+  <li>BPE Tokens</li>
+  <li>Zero-shot Behavior</li>
+</ul>
+
+<h2 id="binary-pair-encoding-bpe-tokens">Binary Pair Encoding (BPE) Tokens</h2>
+
+<ul>
+  <li>Drawback of regular word tokens
+    <ul>
+      <li>Other forms? (play vs playing)</li>
+      <li>Compound words (overripe)</li>
+      <li>Large vocab size</li>
+    </ul>
+  </li>
+  <li>Bgin with a vocabulary: Combine common character-pairs</li>
+  <li>‘A’ + ‘B -&gt; ‘AB’</li>
+  <li>Also, add an end-of-word symbol *</li>
+  <li>Example: {‘low’, ‘lowest’, ‘newer’, ‘wider’}</li>
+  <li>{‘low<em>’, ‘lowest</em>’, ‘newer<em>’, ‘wider</em>’} - Add {r<em>, lo, low, er</em>} to vocabulary - Before: l + o + w + e + r + _ - After: low + er_
+<img src="/assets/img/BPE Tokens.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="zero-shot-behavior">Zero-shot Behavior</h2>
+
+<ul>
+  <li>Use heuristics, rather than supervised trainning</li>
+  <li>Use pre-trained model dircetly</li>
+  <li>E.g: Question answering: Pick the answer the generative model assigns the highest probality to, conditioned on the document and question</li>
+</ul>
+
+<h2 id="analysis-zero-shot-behavior">Analysis: Zero-Shot Behavior</h2>
+
+<p><img src="/assets/img/Zero-Shot Behavior.png" alt="alt text" /></p>
+
+<h2 id="analysis-layer-transfer">Analysis: Layer Transfer</h2>
+
+<p><img src="/assets/img/Layer Transfer.png" alt="alt text" /></p>
+
+<h2 id="related-work">Related Work</h2>
+
+<ul>
+  <li>Pre-trained LSTM
+    <ul>
+      <li><a href="https://www.yeastgenome.org/reference/S000180988">(Dai et al.2015)</a> and <a href="https://arxiv.org/abs/1801.06146">(Howard and Ruder 2018)</a></li>
+      <li>Pre-train LSTM’s on sequence autoencoding, then apply to text classification</li>
+    </ul>
+  </li>
+  <li>Auxiliary unsupervised objectives
+    <ul>
+      <li>Add an unsupervised goal to your objective
+        <ul>
+          <li>E.g Ask your model to do context-prediction and text classification</li>
+          <li>(Collobert and Westion 2008) and (Rei 2017)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="bert-pre-training-of-deep-bidirectional-transformers-for-language-understanding">Bert: Pre-training of Deep Bidirectional Transformers for Language Understanding</h1>
+
+<h2 id="previous-work">Previous Work</h2>
+
+<ul>
+  <li>Language model pre-training has been used to improve many NLP tasks
+    <ul>
+      <li>ELMo (Preters et al., 2018)</li>
+      <li>OpenAI GPT (Redford et al., 2018)</li>
+      <li>ULMFit (Howard and Rudder, 2018)</li>
+    </ul>
+  </li>
+  <li>Language model pre-training has been used to improve may NLP tasks
+    <ul>
+      <li>Feature-based: include pre-trained representations as additional features (e.g., ELMo)</li>
+      <li>Fine-tuning: introduce task-specific parameters and fine-tune the pre-trained parameters</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="limitations-of-revious-techniques">Limitations of Revious Techniques</h2>
+
+<ul>
+  <li>Problem: Language models only use left context or right context, but language, understanding is bidirectional</li>
+  <li>Why are LMs unidirectional?</li>
+  <li>Reason: Words ccan “See themselves” in a bidirectional encoder.</li>
+</ul>
+
+<h2 id="main-ideas">Main Ideas</h2>
+
+<ul>
+  <li>Propose a new training objective so that a deep bidirectional transformer can be trained
+    <ul>
+      <li>The masked language model</li>
+      <li>Next Sentence Prediction</li>
+    </ul>
+  </li>
+  <li>Merits of BERT
+    <ul>
+      <li>Just fine-tune BERT Model for specific tasks to achieve state-of-the-art performance</li>
+      <li>BERT advances the state-of-the-art for eleven NLP tasks</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="mask-lm">Mask LM</h2>
+
+<ul>
+  <li>Solution: Mask out k% of the input words, and then predict the masked words
+    <ul>
+      <li>We always use k = 15%</li>
+    </ul>
+  </li>
+  <li>Too little masking: Too expensive to train</li>
+  <li>Too much masking: Not enough context</li>
+</ul>
+
+<h2 id="mask-lm-cont">Mask LM (con’t)</h2>
+
+<ul>
+  <li>Problem: Mask token never seen at fine-tuning</li>
+  <li>Solution: 15% of the words to predict, but don’t replace with {MASk} 100% of the time.
+    <ul>
+      <li>80% of the time, replace with {MASK}</li>
+      <li>10% of the time, replace random word</li>
+      <li>10% of the time, keep same</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="next-sentence-prediction">Next Sentence Prediction</h2>
+
+<ul>
+  <li>To learn relationships between sentences, predict whether Sentence B is actual sentence that proceeds Sentence A, or a random sentence
+E.g:
+Sentence A = “The man went to the store.”
+Sentence B = “Hebought a gallon of milk.”
+Label = IsNextSentence</li>
+</ul>
+
+<p>Sentence A = “The man went to the store.”
+Sentence B = “Penguins are flightless”
+Label = NotNextSentence</p>
+
+<h2 id="training-loss">Training Loss</h2>
+
+<ul>
+  <li>The training loss is the sum of the mean masked Language Model likelihood and the mean next sentence prediction likelihood</li>
+</ul>
+
+<h2 id="input-representation">Input Representation</h2>
+
+<ul>
+  <li>Use 30.000 WordPiece vocabulary on input</li>
+  <li>Each token is sum of three embeddings
+<img src="/assets/img/Input Representation.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="model-architecture">Model Architecture</h2>
+
+<ul>
+  <li>Transformer encoder</li>
+  <li>Bert (Ours)</li>
+  <li>OpenAI GPT</li>
+  <li>ELMo
+<img src="/assets/img/Transformer encoder.png" alt="alt text" />
+<img src="/assets/img/Bert (Ours)- OpenAI GPT- ELMo.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="model-details">Model Details</h2>
+
+<ul>
+  <li>Data: Wikipedia (2.5B words) + BookCorpus (80M words)</li>
+  <li>Batch Size: 131.072 words (1024 sequences _ 128 length or 256 sequences _ 512 length)</li>
+  <li>Training Time: 1M steps (~40 epochs)</li>
+  <li>Optimizer: AdamW, 1e-4 learining reate, linear decay
+    <ul>
+      <li>BERT-Base: 12-layer, 768-hidden, 12-head</li>
+      <li>BERT-Large: 24-layer, 1024-hidden, 16-head</li>
+    </ul>
+  </li>
+  <li>Trained on 4x4 or 8x8 TPU slice for 4 days</li>
+</ul>
+
+<h2 id="comparison-of-bert-and-openaigpt">Comparison of BERT and OpenAIGPT</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>OpenAI GPT</th>
+      <th>BERT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trained on BooksCorpus(800M)</td>
+      <td>TrainedonBooksCorpus (800M) + Wikipedia (2.5B)</td>
+    </tr>
+    <tr>
+      <td>Use sentence separater(SEP) and classifier token (CLS) only at fine-tuning time</td>
+      <td>BERT learns (SEP), (CLS) and sentence A/B embeddings during pre-training</td>
+    </tr>
+    <tr>
+      <td>Trained for 1M step with a batch-size of 32.000 words</td>
+      <td>Trained for 1M steps with a batch-size of 128.000 words</td>
+    </tr>
+    <tr>
+      <td>Use the same learning rate of 5e-5 for all fine tuing experiments</td>
+      <td>BERT choose a tas-specific learning rate wich preforms the best on the development set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fine-tuning-procedure">Fine-Tuning Procedure</h2>
+
+<ul>
+  <li>Pe-training</li>
+  <li>Fine-Tuning
+<img src="/assets/img/Fine-Tuning Procedure.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="fine-tuning-for-specific-tasks">Fine-Tuning For Specific Tasks</h2>
+
+<p>a. Sentence Pair Classification Tasks: MNLI, QQP, QNLI, STS-B, MRPC, RTE, SWAG
+b. Single Sentence Classification Tasks: SST-2, CoLA
+c. Question Answering Tasks: SQuAD v1.1
+d. Single Sentence Tagging Tasks: CoNLL-2003 NER
+<img src="/assets/img/Fine-Tuning For Specific Tasks.png" alt="alt text" /></p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<ul>
+  <li>Pre-trained language models are increasingly adopted in many NLP tasks</li>
+  <li>Major contribution of this paper is to propose a deep bidirectional architecture from Transformer.</li>
+</ul>
+
+<h1 id="pre-training-and-fine-tuning">Pre-training and Fine-tuning</h1>
+
+<h2 id="sentence-prediction">Sentence prediction</h2>
+
+<ul>
+  <li>NSP could hurt the MLM training objective</li>
+  <li>Recommended reading: SpanBERT: Improving Pre-training by Representing and Predicting Spans</li>
+</ul>
+
+<h2 id="fine-tuning-vs-feature-based">Fine-tuning vs Feature-based</h2>
+
+<ul>
+  <li>Howww ???</li>
+</ul>
+
+<h1 id="xlnet-generalized-autoregressive-pre-training-for-language-understanding">XLNET: Generalized Autoregressive Pre-training for Language Understanding</h1>
+
+<ul>
+  <li><strong>XLNet Key Ideas</strong>: high-level comparison with BERT</li>
+  <li><strong>XLNet Backbone</strong>: Transformer-XL</li>
+  <li><strong>Pre-training Objectives</strong>: comparison with AR and BERT</li>
+  <li><strong>XLNet Design</strong>: permutation,masks, two-stream attention</li>
+  <li><strong>Results</strong>: XLNet outperform BERT on 20 tasks</li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Before: autoregressive (ex. ELMo, GPT) and autoencoding (ex. BERT) models are the two most successful pre-training objectives</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Both approaches have their own limitations</li>
+</ul>
+
+<h2 id="autoregressive-models">Autoregressive Models</h2>
+
+<p>Use context to predict the next word
+<img src="/assets/img/Autoregressive Models.png" alt="alt text" />
+<strong>Only considers context in one direction</strong></p>
+
+<h2 id="autoencoding-models-bert">Autoencoding Models (BERT)</h2>
+
+<p>Note: previously a SOTA pretraining approach
+<img src="/assets/img/Autoencoding Models (BERT).png" alt="alt text" />
+<strong>Fine-tuning discrepancy</strong> caused by {MASK} tokens (not in real data)
+E.g:</p>
+
+<ul>
+  <li>Peter has a {MASK} that does not like {MASK}</li>
+  <li>Assumes <em>cat</em> and <em>yam</em> are independent, which is wrong
+No <strong>joint pobability</strong> between masked entries</li>
+</ul>
+
+<h2 id="two-notable-objectives-for-language-pretraining">Two Notable Objectives for Language Pretraining</h2>
+
+<p>Auto-regressive Language Modeling</p>
+
+<ul>
+  <li>Full Auto-regressive Dependence</li>
+  <li>Free from artificial Noise</li>
+  <li>No Bidirectional Context</li>
+</ul>
+
+<p>Denosing Auto-encoding (BERT)</p>
+
+<ul>
+  <li>Independent Predictions</li>
+  <li>Artificial Noise: {MASK}</li>
+  <li>Natural Bidirectional Context
+<img src="/assets/img/Two Notable Objectives.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="xlnet-key-ideas">XLNet Key Ideas</h2>
+
+<ul>
+  <li>Autoregressive: use context to predict the next word</li>
+  <li>
+    <p>Bidirectional context from permutation language modeling
+<img src="/assets/img/XLNet Key Ideas.png" alt="alt text" /></p>
+  </li>
+  <li>Self-attention mechanisms, uses Transformer-XL backbone
+<img src="/assets/img/Transformer-XL backbone.png" alt="alt text" /></li>
+</ul>
+
+<h2 id="transformer-xl">Transformer-XL</h2>
+
+<p>XL is mean Extra Long<br />
+Increases context through <strong>segment-level recurrence</strong> and a novel positional encoding scheme</p>
+
+<ul>
+  <li><strong>Cache and reuse hidden state</strong> from the previous segment</li>
+  <li>Allows <strong>variable-length context</strong>, great for capturing long-term dependencies</li>
+  <li>Resolves the problem of context fragmentation</li>
+</ul>
+
+<h3 id="before-no-segment-level-recurrence">Before (no segment-level recurrence)</h3>
+
+<p><img src="/assets/img/Before (no segment-level recurrence).png" alt="alt text" /></p>
+
+<h3 id="after-segment-level-recurrence">After segment-level recurrence</h3>
+
+<p><img src="/assets/img/After segment-level recurrence.png" alt="alt text" /></p>
+
+<p>Increases context through segment-level recurrence and a novel <strong>positional encoding scheme</strong><br />
+Need a way to keep positional inforamtion coherent when we reuse the states</p>
+
+<ul>
+  <li>In the original Transformer: absolute position within a segment is used</li>
+  <li>Need to encode relative position</li>
+</ul>
+
+<h2 id="training-objectives">Training objectives</h2>
+
+<p>Traditional AR models vs BERT vs XLNet
+<img src="/assets/img/Traditional AR models vs BERT vs XLNet.png" alt="alt text" /></p>
+
+<h2 id="xlnet-design">XLNet Design</h2>
+
+<h3 id="premutation">Premutation</h3>
+
+<p>Premutation only on factorization order, not the orighinal sequence order</p>
+
+<p>Context Depends on the Factorization Order</p>
+
+<ul>
+  <li>
+    <p>Standard LM: Left to right factorization 1 -&gt; 2 -&gt; 3 -&gt; 4<br />
+\(P(x) = P(x_1)P(x_2|x_1)P(x_3|x_{1,2})P(x_4|x_{1,2,3})\)<br />
+<img src="/assets/img/Standard LM Left to right factorization 1 2 3 4.png" alt="alt text" /></p>
+  </li>
+  <li>Change the Factorization order to: 4 -&gt; 1 -&gt; 3 -&gt; 2
+\(P(x) = P(x_4)P(x_1|x_4) P(x_3|x_{1,4})P(x_2|x_{1,2,4})\)
+<img src="/assets/img/Standard LM Left to right factorization 4 1 3 2.png" alt="alt text" /><br />
+Premutation Language Modeling</li>
+  <li>Given a sequence x of length T</li>
+  <li><em>Uniformly sample a factorization order z</em> from all possible premutations</li>
+  <li>Maximize the premutated log-likelihood
+<img src="/assets/img/Premutation Language Modeling.png" alt="alt text" /></li>
+</ul>
+
+<h3 id="attention-masks">Attention masks</h3>
+
+<p>Attention masks provide the context for each prediction
+<img src="/assets/img/Attention masks 1.png" alt="alt text" />
+<img src="/assets/img/Attention masks 2.png" alt="alt text" /></p>
+
+<h3 id="two-stream-self-attention">Two-stream self-attention</h3>
+
+<p>Two-stream self-attention allows prediction to be aware of target position</p>
+
+<p>Standard AR Parameterization Fails<br />
+E.g:</p>
+
+<p>z = apple was <em>the</em> eaten = \(p(x|apple, was, pos=0)\)<br />
+z = apple was <em>eaten</em> the = \(p(x|apple, was, pos=3)\)<br />
+Predicting <em>the</em> and <em>eaten</em> uses the same distribution<br />
+Fails to take account <strong>target position</strong></p>
+
+<p>Reparameterization</p>
+
+<ul>
+  <li>Satandaard Softmax doeas <strong>Not</strong> work
+<img src="/assets/img/Reparameterization 1.png" alt="alt text" /></li>
+  <li><strong>Proposed</strong> solution: incorporate $z_t$ into <em>hidden states</em>
+<img src="/assets/img/Reparameterization 2.png" alt="alt text" />
+Implement this using <strong>two-stream</strong> architecture</li>
+</ul>
+
+<p>Target Position Aware Representation: $g(z_t, x_{z&lt;t})$</p>
+
+<p><strong>Reuse the Idea of Attention</strong></p>
+
+<ul>
+  <li>Stand at the target position $z_t$</li>
+  <li>Gather information from $x_{z&lt;t}$
+<img src="/assets/img/Target Position Aware Representation.png" alt="alt text" /></li>
+</ul>
+
+<p>Contradiction: Predicting Self and Others</p>
+
+<ul>
+  <li>Factorization order: 4 -&gt; 1 -&gt; 3 -&gt; 2
+<img src="/assets/img/Predicting Self and Others 1.png" alt="alt text" /></li>
+</ul>
+
+<p>Two-Streeam Self-Attention</p>
+
+<ul>
+  <li><strong>Query stream</strong>: encodes target position information ($z_t$)</li>
+  <li><strong>Content stream</strong> encodes both context and the target word ($x_{z_t}$)</li>
+</ul>
+
+<p><img src="/assets/img/Two-Streeam Self-Attention.png" alt="alt text" /></p>
+
+<h3 id="partial-prediction">Partial prediction</h3>
+
+<p>Partial prediction: only predict 1/K tokens in each premutation</p>
+
+<p><strong>Motivation</strong>: reduce optimization difficulty from too little context<br />
+Split sequence into <em>context words</em> and <em>target words</em>, cut off at $c$<br />
+Only predict target words ($1/K$ of original sequence)
+<img src="/assets/img/Partial prediction.png" alt="alt text" /></p>
+
+<h2 id="example-comparison-with-bert">Example: Comparison with BERT</h2>
+
+<p><strong>Input sentence</strong>: New York is a city, masked <em>New</em> and <em>York</em><br />
+<strong>XLNet factorization order</strong>: {is, a, city, New, York}
+<img src="/assets/img/Comparison with BERT.png" alt="alt text" /></p>
+
+<h2 id="xlnet">XLNet</h2>
+
+<p><strong>XLNet</strong> is The <em>Best pretrained model today</em>
+Given standard Flops
+<img src="/assets/img/XLNet is The \_Best pretrained model today.png" alt="alt text" /></p>
+
+<h2 id="exploring-the-limits-of-transfer-learning-with-a-unified-text-to-text-transformer">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</h2>
+
+<p>Transfer Text to Text Transformer : T5<br />
+Paper: https://arxiv.org/pdf/1910.10683.pdf</p>
+
+</article>
+
+      </div>
+      <footer class="footer">
+  
+  
+  
+    <a href="https://github.com/DrUnicornIT" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/DrUnicornIT" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://www.linkedin.com/in/c%C3%B4ng-nguy%E1%BB%85n-0b8479231" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:nnguyencong1507@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="footer-description"><a href="/">AI BLOG | with DrUnicorn by DrUnicorn</a></div>
+</footer>
+
+    </div>
+  </body>
+</html>
