@@ -148,6 +148,9 @@
   },
   "active": "a36d95822ff84521",
   "lastOpenFiles": [
+    "assets/css/syntax.css",
+    "assets/css/main.scss",
+    "assets/css",
     "_site/deep-learning-for-natural-language.html",
     "_posts/2023-02-10-deep-learning-for-natural-language.md",
     "_site/deep-learning-for-natural-language-processing-copy.html",
@@ -170,7 +173,6 @@
     "assets/img/logo-new.png",
     "_site/course-uet.html",
     "_site/uetcourse/computer-network.html",
-    "_site/uetcourse",
     "_posts/2023-27-05-course-uet.md",
     "_posts/2023-05-27-course-uet.md",
     "listmd/computer-network.md",
