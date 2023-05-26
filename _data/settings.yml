@@ -18,7 +18,7 @@ listmd:
         url: "ainlp/pre-trainging-and-fine-tuning",
       }
   courseuet:
-  - { name: "Computer NetWork", url: "courseuet/computer-network" }
+    - { name: "Computer NetWork", url: "courseuet/computer-network" }
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
