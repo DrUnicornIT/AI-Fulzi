@@ -38,15 +38,16 @@ Câu 5. UDP được gọi là giao thức không hưởng kết nối (connecti
 - [ ] Tất cả các đáp án đều sai
 - [ ] Nó gửi dữ liệu như là một luồng các gói tin liên quan đến nhau
 
-Câu 6. Dưới đây là bảng NAT translation table của một thiết bị NAT tại thời điểm hiện tại. Trong hai cột của bảng này, một cột là “Internet side” một cột là “Local side”. Nhìn vào nội dung của bảng, hãy ĐOÁN xem cột nào là Internet side, cột nào là Local side
-Cột 1 
-136.4.6.7 : 210 
-136.4.6.6 : 801 
-1.2.3.4 : 986 
-Cột 2
-192.168.10.44 : 4032
-192.168.6.4 : 1005
-192.168.5.4 : 1108
+Câu 6. Dưới đây là bảng NAT translation table của một thiết bị NAT tại thời điểm hiện tại. Trong hai cột của bảng này, một cột là “Internet side” một cột là “Local side”. Nhìn vào nội dung của bảng, hãy ĐOÁN xem cột nào là Internet side, cột nào là Local side  
+Cột 1  
+136.4.6.7 : 210   
+136.4.6.6 : 801  
+1.2.3.4 : 986  
+Cột 2  
+192.168.10.44 : 4032  
+192.168.6.4 : 1005  
+192.168.5.4 : 1108  
+
 1. Internet side 
 - [ ] Cột 2
 - [x] Cột 1
