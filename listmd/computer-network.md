@@ -8,7 +8,7 @@ permalink: courseuet/computer-network
 Câu 1. Trong các phát biểu sau phát biểu nào KHÔNG chính xác
 - [x] Chồng giao thức của mạng Internet bắt buộc phải có 5 tầng: 1 tầng ứng dụng (application), 1 tầng giao vận (transport), 1 tầng mạng (network), 1 tầng liên kết dữ liệu (data link), và 1 tầng vật lý (physic)
 - [ ] Mạng Internet bao gồm các mạng con kết nối với nhau, mỗi mạng có thể sử dụng các công nghệ hoàn toàn khác nhau ở tằng vật lý và tăng lên kết dữ liệu
-- [ ] Chồng giao thức của mạng Internet có thể có tới 7 tần- [ ]
+- [ ] Chồng giao thức của mạng Internet có thể có tới 7 tầng.
 - [ ] Mạng Internet bao gồm các mạng con kết nối với nhau, mỗi mạng có thể sử dụng các thuật toán tìm đường khác nhau.  
 
 Câu 2. Máy chủ Web proxy dùng cho các máy tính của một trường học cần đặt ở đâu để giảm tải cho đường truyền Internet của trường học đó?
