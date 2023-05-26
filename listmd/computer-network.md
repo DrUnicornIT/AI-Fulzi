@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Computer-NetWork
+title: Computer NetWork
 permalink: courseuet/computer-network
 ---
 
