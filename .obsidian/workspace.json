@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-27-05-course-uet.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-27-05-course-uet.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-27-05-course-uet.md",
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-27-05-course-uet.md"
+                "file": "_posts/2023-02-04-deep-learning-for-natural-language-processing.md"
               }
             }
           }
@@ -148,8 +148,21 @@
   },
   "active": "a36d95822ff84521",
   "lastOpenFiles": [
-    "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
+    "assets/img/Course-UET.png.crdownload",
+    "_site/assets/img/apple-touch-icon.png",
+    "assets/img/apple-touch-icon.png",
+    "_site/assets/img/favicon-32x32.png",
+    "assets/img/favicon-32x32.png",
+    "_site/assets/img/Course-UET.png",
+    "assets/img/Course-UET.png",
+    "_site/assets/img/logo-new.png",
+    "assets/img/logo-new.png",
+    "_site/course-uet.html",
+    "_site/uetcourse/computer-network.html",
+    "_site/uetcourse",
     "_posts/2023-27-05-course-uet.md",
+    "_posts/2023-05-27-course-uet.md",
+    "_posts/2023-02-04-deep-learning-for-natural-language-processing.md",
     "listmd/computer-network.md",
     "listmd/contextualized-word-embeddings.md",
     "assets/img/Encoder-Decoder Framework.png",

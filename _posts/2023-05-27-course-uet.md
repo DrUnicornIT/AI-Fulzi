@@ -4,10 +4,10 @@ title: "Course - UET"
 author: "Nguyen Cong"
 categories: UET, Course
 tags: [documentation, exam, doc]
-image: Natural-Language-Processing-NLP-AI.jpg
+image: Course-UET.png
 toc: true
 ---
 
-# Table of lectures
+# List of courses
 - [ ] Công Nghệ Phần Mềm 
 - [ ] Mạng Máy Tính
