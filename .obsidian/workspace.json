@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "listmd/soft-ware.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "listmd/soft-ware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listmd/computer-network.md",
+                "file": "listmd/soft-ware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listmd/computer-network.md"
+                "file": "listmd/soft-ware.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "f7c38e76b485f8df",
   "lastOpenFiles": [
+    "listmd/computer-network.md",
+    "listmd/soft-ware.md",
     "_site/fonts/Cambria.ttf",
     "_site/assets/img/courseuet.png",
     "_site/assets/img/MMT2020-giaidap-cac-cauhoi-cuaSV.pdf",
@@ -162,8 +164,6 @@
     "assets/img/Unconfirmed 500085.crdownload",
     "listmd/computer-network-no-ans.md",
     "listmd/computer-network-noans.md",
-    "listmd/computer-network.md",
-    "assets/img/MMT2020-giaidap-cac-cauhoi-cuaSV.pdf",
     "listmd/contextualized-word-embeddings.md",
     "listmd/pre-trainging-and-fine-tuning.md",
     "listmd/word-embedding.md"

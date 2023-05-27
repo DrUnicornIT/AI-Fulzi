@@ -20,7 +20,7 @@ listmd:
   courseuet:
     - { name: "Computer NetWork", url: "courseuet/computer-network" }
     - { name: "Computer NetWork No Answer", url: "courseuet/computer-network-noans" }
-
+    - { name: "Software Engineering", url: "courseuet/software-engineering" }
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
