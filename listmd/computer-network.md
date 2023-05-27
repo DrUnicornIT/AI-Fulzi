@@ -12,8 +12,14 @@ Câu 1. Trong các phát biểu sau phát biểu nào KHÔNG chính xác
 - [ ] Chồng giao thức của mạng Internet có thể có tới 7 tầng.
 - [ ] Mạng Internet bao gồm các mạng con kết nối với nhau, mỗi mạng có thể sử dụng các thuật toán tìm đường khác nhau.  
 
->Giải thích:
->Chồng giao thức của mạng Internet thực tế là mô hình OSI (Open Systems Interconnection) gồm 7 tầng, không phải 5 tầng. Các tầng trong mô hình OSI bao gồm: 1. Tầng vật lý (Physical Layer), 2. Tầng liên kết dữ liệu (Data Link Layer), 3. Tầng mạng (Network Layer), 4. Tầng giao vận (Transport Layer), 5. Tầng phiên (Session Layer), 6. Tầng trình diễn (Presentation Layer), và 7. Tầng ứng dụng (Application Layer).
+>Giải thích:  
+>Chồng giao thức của mạng Internet thực tế là mô hình OSI (Open Systems nterconnection) gồm 7 tầng, không phải 5 tầng. Các tầng trong mô hình OSI bao gồm:   1. Tầng vật lý (Physical Layer)
+>2. Tầng liên kết dữ liệu (Data Link Layer)  
+>3. Tầng mạng (Network Layer)  
+>4. Tầng giao vận (Transport Layer)  
+>5. Tầng phiên (Session Layer)  
+>6. Tầng trình diễn (Presentation Layer)  
+>7. Tầng ứng dụng (Application Layer).  
 
 
 Câu 2. Máy chủ Web proxy dùng cho các máy tính của một trường học cần đặt ở đâu để giảm tải cho đường truyền Internet của trường học đó?
@@ -77,8 +83,11 @@ Cột 2
 - [ ] Cột 1
 
 >Giải thích: 
->Trong bảng NAT translation table, cột chứa địa chỉ IP và cổng trên mạng Internet được gọi là Internet side. Trong trường hợp này, cột 1 (136.4.6.7 : 210, 136.4.6.6 : 801, 1.2.3.4 : 986) chứa địa chỉ IP và cổng của các máy tính trên mạng Internet, vì vậy đó là Internet side.
->Cột chứa địa chỉ IP và cổng trên mạng nội bộ (Local Area Network) được gọi là Local side. Trong trường hợp này, cột 2 (192.168.10.44 : 4032, 192.168.6.4 : 1005, 192.168.5.4 : 1108) chứa địa chỉ IP và cổng của các máy tính trong mạng nội bộ, vì vậy đó là Local side.
+>Trong bảng NAT translation table, cột chứa địa chỉ IP và cổng trên mạng Internet được gọi là Internet side. 
+>Trong trường hợp này, cột 1 (136.4.6.7 : 210, 136.4.6.6 : 801, 1.2.3.4 : 986) chứa địa chỉ IP và cổng của các máy tính trên mạng Internet, vì vậy đó là Internet side.
+>
+>Cột chứa địa chỉ IP và cổng trên mạng nội bộ (Local Area Network) được gọi là Local side. 
+>Trong trường hợp này, cột 2 (192.168.10.44 : 4032, 192.168.6.4 : 1005, 192.168.5.4 : 1108) chứa địa chỉ IP và cổng của các máy tính trong mạng nội bộ, vì vậy đó là Local side.
 
 Câu 7. Ứng dụng mạng (Network applications) có thể được xây dựng theo các kiến trúc nào sau đây?
 - [ ] Peer-to-peer
@@ -102,11 +111,11 @@ d. Tầng ứng dụng          iv. Đoạn tin (segment)
 - [ ] a-li b-iv c-id-iii
 
 >Giải thích:
->Ghép kiểu gói tin được sử dụng bởi giao thức của các tầng tương ứng như sau:
->a. Tầng liên kết dữ liệu: ii. Khung tin (frame) 
->b. Tầng mạng: iii. Gói tin (packet) 
->c. Tầng giao vận: iv. Đoạn tin (segment) 
->d. Tầng ứng dụng: i. Thông báo (messages)
+>Ghép kiểu gói tin được sử dụng bởi giao thức của các tầng tương ứng như sau:  
+>a. Tầng liên kết dữ liệu: ii. Khung tin (frame)   
+>b. Tầng mạng: iii. Gói tin (packet)   
+>c. Tầng giao vận: iv. Đoạn tin (segment)   
+>d. Tầng ứng dụng: i. Thông báo (messages)  
 
 Câu 9. Mô hình OSI có bao nhiêu tầng
 - [ ] 5
@@ -115,14 +124,14 @@ Câu 9. Mô hình OSI có bao nhiêu tầng
 - [ ] 10
 
 >Giải thích:
->Mô hình OSI (Open Systems Interconnection) có tổng cộng 7 tầng. Các tầng trong mô hình OSI bao gồm:
->1. Tầng vật lý (Physical Layer)
->2. Tầng liên kết dữ liệu (Data Link Layer)
->3. Tầng mạng (Network Layer)
->4. Tầng giao vận (Transport Layer)
->5. Tầng phiên (Session Layer)
->6. Tầng trình diễn (Presentation Layer)
->7. Tầng ứng dụng (Application Layer)
+>Mô hình OSI (Open Systems Interconnection) có tổng cộng 7 tầng. Các tầng trong mô hình OSI bao gồm:  
+>1. Tầng vật lý (Physical Layer)  
+>2. Tầng liên kết dữ liệu (Data Link Layer)  
+>3. Tầng mạng (Network Layer)  
+>4. Tầng giao vận (Transport Layer)  
+>5. Tầng phiên (Session Layer)  
+>6. Tầng trình diễn (Presentation Layer)  
+>7. Tầng ứng dụng (Application Layer)  
 
 Câu 10. Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ chế truyền lại
 (retransmission). Cơ chế này được thực hiện khi nào ở bên gửi?
@@ -148,8 +157,8 @@ TCP
 - [x] FTP chạy trên port 21
 - [x] HTTP chạy bên trên TCP protocol
 
->Giải thích:
->Đọc chương 2. Mục 2, 3, 4
+>Giải thích:  
+>Đọc chương 2. Mục 2, 3, 4  
 
 Câu 12. Chọn kết luận sát thực tế nhất về “Độ dài lớn nhất của một frame trong
 chuẩn 802.3 (Ethernet)” là
@@ -1127,9 +1136,6 @@ Câu 150. Bộ giao thức truyền dữ liệu qua Internet là?
 - [ ] DNS
 - [ ] HTTP
 - [x] TCP/IP
-
-Câu 151. Trong các tài liệu về mạng máy tính hiện nay, các tác giả hay sử dụng các ví dụ dựa trên mạng để trình bày Internet để có tính thực tế. Để có tính lý thuyết cao, họ cũng thường sử dụng mô hình ... (có 7 tầng)  
-Ans: _OSI_
 
 Câu 152. Tại sao giao thức HTTP lại sử dụng giao thức TCP mà không sử dụng giao thức UDP để truyền dữ liệu?
 - [ ] Giao thức TCP có độ trễ thấp hơn

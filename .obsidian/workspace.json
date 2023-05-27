@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "82698219fac415dc",
@@ -148,6 +149,8 @@
   },
   "active": "f7c38e76b485f8df",
   "lastOpenFiles": [
+    "assets/img/MMT2020-giaidap-cac-cauhoi-cuaSV.pdf",
+    "assets/img/Unconfirmed 723394.crdownload",
     "listmd/contextualized-word-embeddings.md",
     "listmd/pre-trainging-and-fine-tuning.md",
     "listmd/word-embedding.md"
