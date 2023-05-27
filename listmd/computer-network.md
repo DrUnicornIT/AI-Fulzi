@@ -211,13 +211,13 @@ Câu 17. Chọn "Đúng" hoặc "Sai" cho các ý sau về chức năng của ro
 - [ ] Ngăn xung đột
 - [x] Lựa chọn tuyến đường
 - [x] Chuyển tiếp các gói tin
-- [x] Lọc bỏ các gói tin
+- [ ] Lọc bỏ các gói tin
 
 >Giải thích:   
 >1. Ngăn xung đột: Sai Router không phải là thiết bị chịu trách nhiệm ngăn xung đột trong mạng. Các giao thức khác như CSMA/CD trong Ethernet được sử dụng để ngăn xung đột trong mạng.
 >2. Lựa chọn tuyến đường: Đúng Một trong những chức năng quan trọng của router là lựa chọn tuyến đường tốt nhất để chuyển tiếp gói tin từ nguồn đến đích. Router sử dụng các thuật toán định tuyến để xác định đường đi tối ưu dựa trên các tiêu chí như độ trễ, băng thông, hoặc độ ổn định của đường truyền.
 >3. Chuyển tiếp các gói tin: Đúng Chức năng chính của router là chuyển tiếp các gói tin giữa các mạng khác nhau. Router đọc địa chỉ IP của gói tin và quyết định gửi gói tin đó tới đích thông qua tuyến đường phù hợp.
->4.  Lọc bỏ các gói tin: Đúng Router có khả năng lọc bỏ các gói tin dựa trên các tiêu chí như địa chỉ nguồn, địa chỉ đích, hoặc các thông số khác. Việc lọc gói tin giúp router kiểm soát và bảo mật mạng, ngăn chặn các gói tin không mong muốn hoặc nguy hiểm từ truyền qua.
+>4.  Lọc bỏ các gói tin: Sai
 
 Câu 18. Lựa chọn các chức năng của switch
 - [ ] đánh địa chỉ IP
@@ -303,7 +303,13 @@ dưới dạng hexa (không điền tiền tố Ox). Ví dụ 1F3E
 Ans: _4CFF_
 
 >Giải thích:   
->None
+>Năm số trên được chia thành 3 words 16 bit (số hexa): 1200 (0001-0010-0000-0000), 0100 (0000-0001-0000-0000), A000 (1010-0000-0000-0000). 
+>Cộng 3 số 16 bit:
+>0001-0010-0000-0000
+>0000-0001-0000-0000
+>1010-0000-0000-0000
+>-------------------
+>1011-0011-0000-0000, đảo bit => 0100-1100-1111-1111 = 4CFF
 
 Câu 25. Câu nào diễn đạt đúng về switch?
 - [ ] tạo ra nhiều miền collision và nhiều miền broadcast
@@ -325,13 +331,13 @@ dụng TCP để truyền/nhận dữ liệu
 >None 
 
 Câu 27. Các chức năng của link layer được thực hiện ở đâu trong host
-- [x] Network interface card (card mạng) và hệ điều hành
+- [ ] Network interface card (card mạng) và hệ điều hành
 - [ ] Hệ điều hành
 - [ ] Bộ nhớ
-- [ ] Network interface card (card mạng)
+- [x] Network interface card (card mạng)
 
 >Giải thích:    
->None 
+>nguyên tắc “phần cứng và phần mềm là tương đương về logic”. 
 
 Câu 28. NAT giữa một mạng local và mạng Internet làm việc như thế nào
 - [ ] Dịch địa chỉ IP sang địa chỉ MAC
@@ -389,11 +395,11 @@ Câu 32. Các phát biểu dưới đây đúng hay sai ?
 - [ ] Mạng Internet có thể đảm bảo dữ liệu được truyền đến đích theo thời gian thực
 - [x] Asynchronous Data Subscriber Line (ADSL) là một công nghệ mạng truy nhập
 - [ ] Mạng Internet là một mạng đơn giản với các đầu cuối thông minh
-- [x] Đóng gói dữ liệu (encapsulation) nghĩa là bọc gói dữ liệu của tầng dưới vào trong
+- [ ] Đóng gói dữ liệu (encapsulation) nghĩa là bọc gói dữ liệu của tầng dưới vào trong
 gói dữ liệu của tầng trên
 - [ ] Do mạng Internet được thiết kế với các yêu cầu đơn giản nên nó có thể có quy mô
 rất lớn.
-- [x] Mạng Internet có thể đảm bảo dữ liệu truyền là tin cậy
+- [ ] Mạng Internet có thể đảm bảo dữ liệu truyền là tin cậy
 
 >Giải thích:    
 >None 
@@ -607,8 +613,13 @@ lại 1 lần. Tính số gói (kể cả ACK từ B) mà A và B đã gửi cho
 gửi kết thúc.  
 Ans: _21_
 
->Giải thích:    
->None 
+>Giải thích:      
+>Chú ý:   
+>(1) Nội dung câu hỏi này thuộc kiến thức học ở chương 3, mục 3.4.1, SV nên đọc lại cácslides (44-51)/112, trong đó có thí dụ trình bày bằng hình vẽ ở slide 51 (GBN in action);   
+>(2) Cứ theo đề mà làm, đừng thắc mắc (vì thực tế nếu cửa sổ bằng 6 thì gói tin được đánh stt từ 0-5).   
+>A gửi cho B các gói: 0, 1, 2, 3, 4, 5, 6, 3, 4, 5, 6 (11 gói)   
+>B gửi cho A các gói (ack): 0, 1, 2, 2, 2, 2, 3, 4, 5, 6 (10 gói)    
+> Tổng cộng 2 máy A và B gửi cho nhau 21 gói tin.    
 
 Câu 52. Được biết ngưỡng (threshold) hiện tại của quá trình kiểm soát tắc nghẽn là
 16, hãy xác định giá trị của cửa sổ chống tắc nghẽn (congwin) khi bên gửi đã gửi
@@ -618,8 +629,11 @@ tổng số 35 segment và nhận đầy đủ số ACK trả về mà không c�
 - [x] 16
 - [ ] 19
 
->Giải thích:    
->None 
+>Giải thích:     
+>threshold = 16, đây là ngưỡng trên của việc thực hiện thuật toán SS (Slow Start)   
+>Trong quá trình thực hiện SS, congwin lần lượt nhận các giá trị sau: 1, 2, 4, 8, 16; tổng số gói tin (segment) đã gửi cho đến cuối quá trình thực hiện SS là 1+2+4+8+16 = 31 gói tin      
+>Tiếp theo là quá trình thực hiện CA (Congestion Avoidance), congwin có thể lần lượt nhận các giá trị sau: 17, 18, 19 v.v.    
+>Như vậy gói tin gửi đi thứ 35 khi congwin=17. 
 
 Câu 53. Một mạng LAN hình trạng bus có chiều dài 2km. Tốc độ lan truyền tín hiệu trên dây là 2 x 10^8 m/s. Mạng sử dụng CSMA/CD để truy nhập đường truyền và có tốc độ truyền dữ liệu là 10^7 bps . Trong CSMA/CD, người ta sử dụng cơ chế nghe đường truyền để phát hiện đụng độ (collision detection) trong khi vẫn đang truyền tin. Để máy phát hiện đụng độ trong khi truyền, thì tín hiệu sau khi đụng độ lại tiếp tục được truyền đi tiếp rồi quay lại máy đang truyền trong khoảng thời gian máy đang truyền tin. Trường hợp xấu nhất đề máy truyền tín hiệu và tín hiệu lại quay trở về máy là hai lần khoảng thời gian lan truyền tín hiệu trong mạng. Khoảng thời gian này tương đương với việc máy truyền từ bit đầu tiên đến bit cuối cùng của khung tin. Như vậy, để đảm bảo mọi đụng độ đều có thể được phát hiện trong khi máy đang truyền tin thì kích cỡ nhỏ nhất của khung tin được sử dụng trong mạng LAN này nên là ?
 - [ ] 100 bytes
@@ -641,10 +655,13 @@ Câu 54. Hub là thiết bị truyền tin?
 
 Câu 55. Máy tính của Ngân có IP là 17.84.129.73/19, hãy viết địa chỉ Broadcast của
 mạng IP mà máy tính của Ngân đang tham gia dưới dạng a.b.c.d/x.y.z.t  
-Ans: _17.84.157.255/255.255.224.0_
+Ans: _17.84.159.255/255.255.224.0_
 
 >Giải thích:    
->None 
+>17.84.129.73/19 => dạng nhị phân *0001-0001.0101-0100.100*0-0001.0100-1001
+>địa chỉ broadcast là:
+>*0001-0001.0101-0100.100*1-1111.1111-1111
+>=> 17.84.159.255 (1001-1111b = 159d)
 
 Câu 56. Cơ chế phân cấp nào hỗ trợ ánh xạ tên máy tính (hostname) và địa chỉ IP:
 - [ ] RARP
@@ -795,7 +812,11 @@ liệu đó biết rằng CRC generator G dưới dạng nhị phân là 1001.
 Ans: _110_
 
 >Giải thích:    
->None 
+>(Chú ý: a. Ta chỉ cần tính phần dư; b. Chia modulo 2 tương tự xor, không có số mượn, số nhớ)
+>A0B1 = 1010-0000-1011-0001; G=1001
+>1010.0000.1011.0001.000 (A0B1)
+>1001 (Generator)
+>_110_
 
 Câu 71. Khi Bob gửi e-mail cho Alice, máy tính của Alice không kết nối mạng. Khi
 đó, email của Bob sẽ nằm ở đâu?
@@ -810,7 +831,7 @@ Câu 71. Khi Bob gửi e-mail cho Alice, máy tính của Alice không kết n�
 Câu 72. Loại địa chỉ nào trên máy tính đầu cuối mà ứng dụng sử dụng để có thể nhận
 được dữ liệu từ nơi khác chuyển tới
 - [ ] IP address
-- [x] MAC address
+- [ ] MAC address
 - [ ] NIC address
 - [x] Port address
 
@@ -819,9 +840,9 @@ Câu 72. Loại địa chỉ nào trên máy tính đầu cuối mà ứng dụn
 
 Câu 73. Câu nói nào là đúng?
 - [ ] Subnet mask chỉ được sử dụng ở lớp địa chỉ (class) A và B
-- [x] Các máy tính đầu cuối luôn có subnet mask
+- [ ] Các máy tính đầu cuối luôn có subnet mask
 - [ ] Subnet mask được gán cho các thiết bị ở lớp địa chỉ (class) A
-- [ ] Các thiết bị được gán cho một subnet mask chỉ khi chúng thuộc về cùng một mạng con
+- [x] Các thiết bị được gán cho một subnet mask chỉ khi chúng thuộc về cùng một mạng con
 
 >Giải thích:    
 >None 
@@ -1023,10 +1044,10 @@ Câu 95. Các phát biểu dưới đây đúng hay sai ?
 - [x] Cả TCP và UDP đều có trường checksum trong phần tiêu đề
 - [x] TCP header có thể có nhiều hơn 20 bytes
 - [x] TCP header tối thiểu có 20 bytes
-- [ ] TCP sẽ giảm cửa sổ cwnd đi một nửa khi phát hiện một gói bị mất do timeout 
+- [x] TCP sẽ giảm cửa sổ cwnd đi một nửa khi phát hiện một gói bị mất do timeout 
 
 >Giải thích:    
->None 
+>Chương 3 mục 5, 7 
 
 Câu 96. Hãy xem xét một tình huống trong đó máy A đang truyền dữ liệu cho máy B.
 - Segment đầu tiên A gửi cho B có Sequence Number bằng 10
@@ -1083,12 +1104,12 @@ Câu 100. Switch là thiết bị ở tầng
 
 Câu 101. Hãy tìm câu trả lời không chính xác liên quan đến DHCP
 - [ ] DHCP có thể trả lại địa chỉ của Default gateway (địa chỉ router đầu tiên)
-- [ ] DHCP hoạt động ở tầng ứng dụng trong mô hình Internet
+- [x] DHCP hoạt động ở tầng ứng dụng trong mô hình Internet
 - [ ] Địa chỉ đích của gói tin DHCP Reply là 255.255.255.255
-- [x] DHCP có thể sử dụng để truyền tin quảng bá
+- [ ] DHCP có thể sử dụng để truyền tin quảng bá
 
 >Giải thích:    
->None 
+>ChatGPT 
 
 Câu 102. Các phát biểu dưới đây đúng hay sai ?
 - [ ] Ứng dụng mạng chỉ có thể được kiến trúc theo kiểu client/server
@@ -1281,9 +1302,9 @@ Câu 121. Hiện tượng mất dữ liệu (loss) xảy ra trên mạng truyề
 >None 
 
 Câu 122. Trong một mạng LAN có cài đặt một switch nối với một router. Router được tích hợp chức năng DHCP và DNS. Một máy tính (máy C) được cấu hình sử dụng DHCP được bật lên và cắm vào switch của mạn- [ ] Ngay sau khi máy C được cấp phát thành công một địa chỉ IP, C thực hiện một câu truy vấn tên miền www.vnexpress.net đến máy chủ DNS nội bộ của mạng LAN. Giả sử rằng tên miền www.vnexpress.net đã được cache tại máy chủ DNS nội bộ. Hỏi: Câu nào chính xác nhất trong các phát biểu dưới đây?
-- [ ] Sau khi máy C cắm vào switch, ARP được kích hoạt ở lớp datalink, sau đó DHCP được kích hoạt, sau đó DNS được kích hoạt ở tầng ứng dụng
+- [x] Sau khi máy C cắm vào switch, ARP được kích hoạt ở lớp datalink, sau đó DHCP được kích hoạt, sau đó DNS được kích hoạt ở tầng ứng dụng
 - [ ] Sau khi máy C cắm vào switch, DHCP được kích hoạt, sau đó DNS được kích hoạt ở tầng ứng dụng khiến cho ARP được kích hoạt ở tầng datalink.
-- [x] Sau khi máy C cắm vào switch, DHCP được kích hoạt chạy bên trên UDP, sau đó ARP được kích hoạt ở lớp datalink, sau đó DNS chạy ở tầng ứng dụng để có được tên miền www.vnexpress.net
+- [ ] Sau khi máy C cắm vào switch, DHCP được kích hoạt chạy bên trên UDP, sau đó ARP được kích hoạt ở lớp datalink, sau đó DNS chạy ở tầng ứng dụng để có được tên miền www.vnexpress.net
 - [ ] Sau khi máy C cắm vào switch, DNS được kích hoạt ở tầng ứng dụng, sau đó DHCP được kích hoạt sử dụng UDP ở tầng giao vận, sau đó ARP được kích hoạt ở tầng datalink
 
 >Giải thích:    
@@ -1418,14 +1439,18 @@ Câu 136. Hãy tìm câu trả lời đúng nhất liên quan đến DNS:
 >Giải thích:    
 >None 
 
-Câu 137. Một router nhận một gói tin IP có độ dài phần dữ liệu là 1000 byte và định tuyến gói tin này qua một liên kết mạng có MTU là 500 byt- [ ] Gói tin IP không có trường option. Trường length của gói bé nhất có giá trị bao nhiêu ? 
+Câu 137. Một router nhận một gói tin IP có độ dài phần dữ liệu là 1000 byte và định tuyến gói tin này qua một liên kết mạng có MTU là 500 byte. Gói tin IP không có trường option. Trường length của gói bé nhất có giá trị bao nhiêu ? 
 - [ ] 80
 - [x] 60
 - [ ] 40
 - [ ] 20
 
 >Giải thích:    
->None 
+>Để truyền qua được mạng có MTU=500 bytes khối dữ liệu 1000 bytes phải được chia thành 3 gói:   
+>Gói thứ nhất – pkt1: 480 bytes (thêm IP header nữa sẽ thành 500 bytes)   
+>Gói thứ hai – pkt2: 480 bytes (thêm IP header nữa sẽ thành 500 bytes)   
+>Gói thứ ba – pkt3 (1000-2480) bytes = 40 bytes (thêm IP header nữa sẽ thành 60 bytes)   
+>Giá trị của trường Length của gói bé nhất là 60 (=3CH=0011-1100b)   
 
 Câu 138. Cơ cấu chuyển mạch (switching fabric) nào sau đây có tốc độ xử lý gói tin nhanh nhất ? Biết tốc độ xử lý của các đường bus là như nhau.
 - [x] Kiểu cross-bar
@@ -1526,7 +1551,10 @@ Hỏi: Thời gian cần thiết để truyền toàn bộ file đến đích l�
 Ans: _24_
 
 >Giải thích:    
->None 
+>Ngoài các giả thiết đã cho, tôi giả thiết bổ sung: 1 Kbyte = 1000 bytes và 1 Mbps = 10^6 bps (bit persecond); Từ đó suy ra:   
+>+ File cần truyền được chứa trong 01 gói tin  
+>+ Thời gian cần thiết để truyền 01 gói tin (transmission time) lên đường truyền:   (1000bytes x 8bits/byte)/1000000bps = 0,008s = 8ms.  
+>+ Thời gian cần cần thiết để truyền toàn bộ file đến đích bằng 3*(transmission time)=3 x 8ms=24ms.   
 
 Câu 148. Đặc điểm của UDP là
 - [ ] Quảng bá
@@ -1831,4 +1859,17 @@ Câu 181. Những phát biểu dưới đây đúng hay sai
 >Giải thích:    
 >None 
 
-Câu 182
+Câu 182: Một nút mạng có thông số về địa chỉ IP như sau: 194.12.2.179/255.255.255.240. Xác định số hiệu
+của Subnet mà host này thuộc vào và host number của nút mạng:
+- [ ] Subnet 11110000, host number 179
+- [ ] Subnet 01010101, hostnumber 12
+- [x] Subnet 10110011, host number 179
+- [ ] Subnet 11110000, host number 11 
+
+>Giải thích:    
+>Để xác định số hiệu của Subnet mà host này thuộc vào và host number của nút mạng, chúng ta cần thực hiện các bước sau đây:
+>1. Xác định số bit 1 trong subnet mask: 255.255.255.240 Subnet mask này có dạng CIDR là /28, vì nó có 28 bit 1 liên tiếp (từ trái qua phải).
+>2. . Xác định địa chỉ IP của subnet. Địa chỉ IP của subnet là địa chỉ mạng của nút mạng, được tính bằng cách thực hiện phép AND giữa địa chỉ IP và subnet mask. Địa chỉ IP: 194.12.2.179 Subnet mask: 255.255.255.240 Kết quả AND: 194.12.2.179 -> 11000010.00001100.00000010.10110011 (địa chỉ IP dưới dạng nhị phân) 255.255.255.240 -> 11111111.11111111.11111111.11110000 (subnet mask dưới dạng nhị phân) Kết quả AND: 11000010.00001100.00000010.10110000 Địa chỉ IP của subnet: 194.12.2.176
+>3. Xác định số hiệu của subnet. Để xác định số hiệu của subnet, chúng ta chỉ cần xem giá trị của byte cuối cùng trong địa chỉ IP của subnet. Byte cuối cùng: 10110000 (dưới dạng nhị phân) = 176 (dưới dạng thập phân) Vậy, số hiệu của subnet mà host này thuộc vào là 176.
+>4. Xác định host number của nút mạng. Để xác định host number của nút mạng, chúng ta chỉ cần xem giá trị của byte cuối cùng trong địa chỉ IP của nút mạng. Byte cuối cùng: *10110011* (dưới dạng nhị phân) = 179 (dưới dạng thập phân) Vậy, host number của nút mạng là *179*.
+>Tóm lại, số hiệu của subnet mà host này thuộc vào là 176 và host number của nút mạng là 179.

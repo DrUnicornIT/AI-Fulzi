@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listmd/computer-network-no-ans.md",
+                "file": "listmd/computer-network.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listmd/computer-network-no-ans.md",
+                "file": "listmd/computer-network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listmd/computer-network-no-ans.md",
+                "file": "listmd/computer-network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listmd/computer-network-no-ans.md"
+                "file": "listmd/computer-network.md"
               }
             }
           }
@@ -149,8 +149,10 @@
   },
   "active": "f7c38e76b485f8df",
   "lastOpenFiles": [
-    "listmd/computer-network-noans.md",
+    "assets/img/CNPM-Google-Tài-liệu.pdf",
+    "assets/img/Unconfirmed 500085.crdownload",
     "listmd/computer-network-no-ans.md",
+    "listmd/computer-network-noans.md",
     "listmd/computer-network.md",
     "assets/img/MMT2020-giaidap-cac-cauhoi-cuaSV.pdf",
     "assets/img/Unconfirmed 723394.crdownload",
