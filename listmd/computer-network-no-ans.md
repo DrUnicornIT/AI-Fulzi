@@ -495,6 +495,7 @@ Cho biết các dữ kiện sau:
 Hỏi: Trễ truyền 1 gói tin từ S đến R là bao nhiêu ms ? (điền kết quả là một số với giá
 trị là thời gian trễ với đơn vị milisecond. Ví dụ: 10)
 S ---------- N1 ---------- N2 ---------- R    
+
 Ans: 
 
 >Giải thích:    
@@ -1005,6 +1006,7 @@ Hỏi: Sequence Number của segment-1, segment-2, segment-3 tương ứng là b
 nhiêu?
 Chú ý: điền đáp án là 3 số nguyên cách nhau bằng dấu phẩy (,) và không có dấu
 cách. Ví dụ: 10,15,2  
+
 Ans: 
 
 >Giải thích:    
@@ -1490,7 +1492,8 @@ Câu 147. Trên một mạng chuyển mạch gói, có một route (path) trải
 (2) trễ lan truyền tín hiệu (propagation delay) và trễ hàng đợi (queuing delay) là rất nhỏ; 
 (3) đơn vị truyền dữ liệu của mạng là các gói tin bằng nhau kích thước 1000 byte;
 (4) Bỏ qua overhead của tất cả các giao thức sử dụng.
-Hỏi: Thời gian cần thiết để truyền toàn bộ file đến đích là bao nhiêu miliseconds?  
+Hỏi: Thời gian cần thiết để truyền toàn bộ file đến đích là bao nhiêu miliseconds? 
+
 Ans: 
 
 >Giải thích:    
