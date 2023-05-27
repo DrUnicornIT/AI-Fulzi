@@ -3,6 +3,7 @@ layout: page
 title: Computer NetWork
 permalink: courseuet/computer-network
 ---
+## Exam-Type-Option-Plus
 
 ## Exam
 Câu 1. Trong các phát biểu sau phát biểu nào KHÔNG chính xác
@@ -11,17 +12,30 @@ Câu 1. Trong các phát biểu sau phát biểu nào KHÔNG chính xác
 - [ ] Chồng giao thức của mạng Internet có thể có tới 7 tầng.
 - [ ] Mạng Internet bao gồm các mạng con kết nối với nhau, mỗi mạng có thể sử dụng các thuật toán tìm đường khác nhau.  
 
+Giải thích
+	Chồng giao thức của mạng Internet thực tế là mô hình OSI (Open Systems Interconnection) gồm 7 tầng, không phải 5 tầng. Các tầng trong mô hình OSI bao gồm: 1. Tầng vật lý (Physical Layer), 2. Tầng liên kết dữ liệu (Data Link Layer), 3. Tầng mạng (Network Layer), 4. Tầng giao vận (Transport Layer), 5. Tầng phiên (Session Layer), 6. Tầng trình diễn (Presentation Layer), và 7. Tầng ứng dụng (Application Layer).
+
+
 Câu 2. Máy chủ Web proxy dùng cho các máy tính của một trường học cần đặt ở đâu để giảm tải cho đường truyền Internet của trường học đó?
 - [ ] Ở vị trí bất kỳ trên mạng Internet 
-- [x] Trong mạng backbone của nhà cung cấp dịch vụ Internet (ISP) của trường học
-- [ ] Trong mạng nội bộ của trường học
+- [ ] Trong mạng backbone của nhà cung cấp dịch vụ Internet (ISP) của trường học
+- [x] Trong mạng nội bộ của trường học
 - [ ] Gần máy chủ Web mà các máy tính của trường học đỏ truy cập nhiều nhất
+
+Giải thích 
+	+ sai. Giải thích: Web cache server (Máy chủ Web proxy) phải nằm trên tuyến đường từ một máy tính trong mạng của trường học đến một trong các web server được (NSD trong mạng trường học) truy cập, vì vậy “vị trí bất kỳ” là sai.
+	+ sai. Giải thích: Mặc dù Web cache server có thể đặt ở trong mạng backbone của ISP, nhưng sẽ xa hơn so với đặt trong chính mạng của NSD (mạng trường học).
+	+ đúng. Giải thích: Đây là nơi gần NSD nhất do đó có thể đạt hiệu quả cao nhất. 
+	+ sai. Giải thích: Web cache server càng nằm xa mạng của NSD (mạng trường học) thì hiệu quả giảm tải trên đường truyền Internet càng giảm.
 
 Câu 3. Trong kiến trúc giao thức TCP/IP, tầng IP cung cấp dịch vụ gì cho tầng giao vận?
 - [ ] Truyền dữ liệu giữa các máy tính với độ trễ không đổi
 - [ ] Đảm bảo các gói tin được truyền đến đúng tiến trình của bên nhận
 - [x] Định tuyến gói tin đến đúng địa chỉ IP của bên nhận
 - [ ] Đảm bảo truyền tin tin cậy giữa các máy tính có liên kết vật lý trực tiếp
+
+Giải thích
+	Trong kiến trúc giao thức TCP/IP, tầng IP (Internet Protocol) là tầng mạng và có trách nhiệm định tuyến gói tin từ nguồn đến đích trong mạng. Tầng IP xác định địa chỉ IP của các thiết bị mạng và sử dụng các giao thức định tuyến để định tuyến gói tin thông qua mạng từ một địa chỉ nguồn đến địa chỉ đích. Vì vậy, tầng IP cung cấp dịch vụ định tuyến gói tin đến đúng địa chỉ IP của bên nhận. Tầng giao vận (ví dụ: TCP hoặc UDP) sẽ đảm bảo truyền dữ liệu giữa các máy tính và đảm bảo các gói tin được truyền đến đúng tiến trình của bên nhận, nhưng các chức năng này không thuộc trách nhiệm của tầng IP.
 
 Câu 4. Giao thức nào dùng để gửi email
 - [ ] SSH
@@ -32,11 +46,17 @@ Câu 4. Giao thức nào dùng để gửi email
 - [ ] POP3
 - [x] SMTP
 
+Giải thích
+	Giao thức dùng để gửi email là SMTP (Simple Mail Transfer Protocol).
+
 Câu 5. UDP được gọi là giao thức không hưởng kết nối (connectionless) vì
 - [ ] Cả B và D
 - [x] Tất cả gói tin UDP được đối xử một cách độc lập
 - [ ] Tất cả các đáp án đều sai
 - [ ] Nó gửi dữ liệu như là một luồng các gói tin liên quan đến nhau
+
+Giải thích: 
+	None
 
 Câu 6. Dưới đây là bảng NAT translation table của một thiết bị NAT tại thời điểm hiện tại. Trong hai cột của bảng này, một cột là “Internet side” một cột là “Local side”. Nhìn vào nội dung của bảng, hãy ĐOÁN xem cột nào là Internet side, cột nào là Local side  
 Cột 1  
@@ -55,11 +75,18 @@ Cột 2
 - [x] Cột 2
 - [ ] Cột 1
 
+Giải thích: 
+	Trong bảng NAT translation table, cột chứa địa chỉ IP và cổng trên mạng Internet được gọi là Internet side. Trong trường hợp này, cột 1 (136.4.6.7 : 210, 136.4.6.6 : 801, 1.2.3.4 : 986) chứa địa chỉ IP và cổng của các máy tính trên mạng Internet, vì vậy đó là Internet side.
+	Cột chứa địa chỉ IP và cổng trên mạng nội bộ (Local Area Network) được gọi là Local side. Trong trường hợp này, cột 2 (192.168.10.44 : 4032, 192.168.6.4 : 1005, 192.168.5.4 : 1108) chứa địa chỉ IP và cổng của các máy tính trong mạng nội bộ, vì vậy đó là Local side.
+
 Câu 7. Ứng dụng mạng (Network applications) có thể được xây dựng theo các kiến trúc nào sau đây?
 - [ ] Peer-to-peer
 - [ ] Client-Server
 - [x] Cả B, A và D
 - [ ] Hybrid
+
+Giải thích:
+	None
 
 Câu 8.
 Ghép kiểu gói tin được sử dụng bởi giao thức của các tầng tương ứng?
@@ -73,11 +100,28 @@ d. Tầng ứng dụng          iv. Đoạn tin (segment)
 - [ ] a-ii b-iv c-iii d-i
 - [ ] a-li b-iv c-id-iii
 
+Giải thích:
+	Ghép kiểu gói tin được sử dụng bởi giao thức của các tầng tương ứng như sau:
+	a. Tầng liên kết dữ liệu: ii. Khung tin (frame) 
+	b. Tầng mạng: iii. Gói tin (packet) 
+	c. Tầng giao vận: iv. Đoạn tin (segment) 
+	d. Tầng ứng dụng: i. Thông báo (messages)
+
 Câu 9. Mô hình OSI có bao nhiêu tầng
 - [ ] 5
 - [x] 7
 - [ ] 4
 - [ ] 10
+
+Giải thích:
+	Mô hình OSI (Open Systems Interconnection) có tổng cộng 7 tầng. Các tầng trong mô hình OSI bao gồm:
+	1. Tầng vật lý (Physical Layer)
+	2. Tầng liên kết dữ liệu (Data Link Layer)
+	3. Tầng mạng (Network Layer)
+	4. Tầng giao vận (Transport Layer)
+	5. Tầng phiên (Session Layer)
+	6. Tầng trình diễn (Presentation Layer)
+	7. Tầng ứng dụng (Application Layer)
 
 Câu 10. Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ chế truyền lại
 (retransmission). Cơ chế này được thực hiện khi nào ở bên gửi?
@@ -86,12 +130,15 @@ Câu 10. Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ 
 - [ ] Khi phát hiện sai thứ tự gói tin
 - [ ] Khi phát hiện trùng gói tin
 
+Giải thích:
+	Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ chế truyền lại (retransmission). Cơ chế này được thực hiện khi bên gửi không nhận được ACK (acknowledgment) từ bên nhận trong khoảng thời gian chờ nhận ACK (timeout). Khi thời gian chờ đã hết mà không nhận được ACK, TCP sẽ cho là gói tin đã bị mất trong quá trình truyền và sẽ gửi lại gói tin đó. Việc truyền lại gói tin nhằm đảm bảo rằng dữ liệu được nhận đúng và đầy đủ tại bên nhận. Cơ chế này giúp TCP xử lý các vấn đề như mất gói tin trong quá trình truyền hoặc thời gian chờ quá lâu mà không nhận được phản hồi từ bên nhận.
+
 Câu 11. Các phát biểu dưới đây đúng hay sai ?
 - [ ] Chỉ cần SMTP là đủ cho các hệ thống email phổ biến hiện nay hoạt động được
-- [ ] Thông tin điều khiển và dữ liệu tải file của FTP được chạy trên cùng một kết nối
+- [x] Thông tin điều khiển và dữ liệu tải file của FTP được chạy trên cùng một kết nối
 TCP
 - [ ] HTTP request và HTTP response chạy trên hai kết nối TCP khác nhau
-- [ ] Mỗi một HTTP request tương ứng với một hoặc nhiều HTTP response
+- [x] Mỗi một HTTP request tương ứng với một hoặc nhiều HTTP response
 - [x] Mỗi một chu kỳ Request-response của HTTP chỉ có thể chạy trên cùng 1 kết nối
 TCP
 - [x] HTTP protocol chỉ có hai loại bản tin là HTTP request và HTTP response
@@ -139,7 +186,7 @@ Câu 17. Chọn "Đúng" hoặc "Sai" cho các ý sau về chức năng của ro
 
 Câu 18. Lựa chọn các chức năng của switch
 - [ ] đánh địa chỉ IP
-- [ ] tránh các vòng lặp
+- [x] tránh các vòng lặp
 - [x] forwarding và lọc frame theo MAC
 - [x] học địa chỉ MAC
 - [ ] định tuyến
@@ -152,9 +199,9 @@ Câu 19. Trong biểu diễn nhị phân, đâu là phạm vi của lớp địa
 - [ ] 0...
 
 Câu 20. Giao thức TCP là một giao thức
-- [x] Hướng kết nối (connection oriented)
-- [x] Sử dụng quy trình bắt tay ba bước để khởi tạo kết nối
-- [ ] Cả 3 đáp án đều đúng
+- [ ] Hướng kết nối (connection oriented)
+- [ ] Sử dụng quy trình bắt tay ba bước để khởi tạo kết nối
+- [x] Cả 3 đáp án đều đúng
 - [ ] Gom dữ liệu từ các ứng dụng thành một luồng duy nhất
 
 Câu 21. Hai máy tính A (IP: 10.10.0.1/24) và B (IP: 172.16.0.1/24) có thể trao đổi dữ
@@ -162,9 +209,9 @@ liệu với nhau bình thường, Khi tầng Application từ A cần gửi th�
 Application của B, bên trong khung tin (frame) đi ra từ tầng liên kết dữ liệu (data link)
 của máy A gửi đến máy B sẽ chứa
 - [ ] MAC của A, MAC của B, IP của A, IP của B
-- [x] MAC của A, IP của A, IP của B
+- [ ] MAC của A, IP của A, IP của B
 - [ ] MAC của B, IP của A, IP của B
-- [ ] MAC của A, MAC của B.
+- [x] MAC của A, MAC của B.
 
 Câu 22. Dịch vụ DNS có thể cân bằng tải cho các Web server được nhân bản của
 cùng một trang Web bằng cách nào?
@@ -266,9 +313,9 @@ Bảng định tuyến của nó có các mục sau:
 Câu 33. Các phát biểu dưới đây đúng hay sai ?
 - [x] Mạng Internet nghẽn chủ yếu ở mạng lõi (Core network)
 - [ ] Mạng Internet có thể đảm bảo dữ liệu được truyền đến đích theo thời gian thực
-- [ ] Asynchronous Data Subscriber Line (ADSL) là một công nghệ mạng truy nhập
+- [x] Asynchronous Data Subscriber Line (ADSL) là một công nghệ mạng truy nhập
 - [ ] Mạng Internet là một mạng đơn giản với các đầu cuối thông minh
-- [ ] Đóng gói dữ liệu (encapsulation) nghĩa là bọc gói dữ liệu của tầng dưới vào trong
+- [x] Đóng gói dữ liệu (encapsulation) nghĩa là bọc gói dữ liệu của tầng dưới vào trong
 gói dữ liệu của tầng trên
 - [ ] Do mạng Internet được thiết kế với các yêu cầu đơn giản nên nó có thể có quy mô
 rất lớn.
