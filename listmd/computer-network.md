@@ -133,8 +133,7 @@ Câu 9. Mô hình OSI có bao nhiêu tầng
 >6. Tầng trình diễn (Presentation Layer)  
 >7. Tầng ứng dụng (Application Layer)  
 
-Câu 10. Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ chế truyền lại
-(retransmission). Cơ chế này được thực hiện khi nào ở bên gửi?
+Câu 10. Để đảm bảo truyền dữ liệu tin cậy, TCP sử dụng cơ chế truyền lại (retransmission). Cơ chế này được thực hiện khi nào ở bên gửi?
 - [ ] Khi phát hiện lỗi checksum
 - [x] Khi hết thời gian chờ nhận ACK (timeout)
 - [ ] Khi phát hiện sai thứ tự gói tin
@@ -293,7 +292,7 @@ Ans: _60_
 >Giải thích:   
 >None
 
-Câu 24. Cho đoạn dữ liệu gồm 5 byt- [ ] Mỗi byte được biểu diễn dưới dạng mã hexa
+Câu 24. Cho đoạn dữ liệu gồm 5 byte. Mỗi byte được biểu diễn dưới dạng mã hexa
 như bảng dưới. Tính Internet checksum của đoạn dữ liệu đó. Yêu cầu viết kết quả
 dưới dạng hexa (không điền tiền tố Ox). Ví dụ 1F3E
 
@@ -321,16 +320,6 @@ dụng TCP để truyền/nhận dữ liệu
 - [ ] ARP
 - [ ] IP
 - [ ] HTTP
-
->Giải thích:    
->None 
-
-Câu 27. Câu nói nào là đúng?
-- [x] Các máy tính đầu cuối luôn có subnet mask
-- [ ] Subnet mask được gán cho các thiết bị ở lớp địa chỉ (class) - [ ]
-- [ ] Các thiết bị được gán cho một subnet mask chỉ khi chúng thuộc về cùng một
-mạng con
-- [ ] Subnet mask chỉ được sử dụng ở lớp địa chỉ (class) A và B
 
 >Giải thích:    
 >None 
@@ -574,17 +563,6 @@ có cùng địa chỉ mạng (subnet)?
 >Giải thích:    
 >None 
 
-Câu 48. Trong giao thức CSMA/CD, nếu 2 máy tính cùng đồng thời truyền 2 khung
-tin vào môi trường truyền thì 2 máy tính này sẽ
-- [ ] Gửi cảnh báo xung đột cho nhau và tiếp tục truyền
-- [ ] Chỉ phát hiện được xung đột sau khi nhận được gói tin biên nhận ACK
-- [x] Phát hiện được xung đột và ngừng truyền dữ liệu ngay lập tức
-- [ ] Tăng mức năng lượng của tín hiệu truyền để giảm nguy cơ bị lỗi do xung đột xảy
-ra
-
->Giải thích:    
->None 
-
 Câu 49. Khi một gói tin rời khỏi mạng, Router NAT thay thế địa chỉ nguồn của gói tin
 đó bằng
 - [ ] Địa chỉ IP đích
@@ -600,40 +578,6 @@ Câu 50. Card mạng Ethernet làm gì khi xảy ra xung đột
 - [ ] Đợi 10 phút rồi truyền lại từ đầu
 - [ ] Đợi 2 phút rồi truyền tiếp
 - [x] Dừng truyền ngay lập tức
-
->Giải thích:    
->None 
-
-Câu 51. Loại địa chỉ nào trên máy tính đầu cuối mà ứng dụng sử dụng để có thể
-nhận được dữ liệu từ nơi khác chuyển tới
-- [ ] IP address
-- [ ] MAC address
-- [x] Port address
-- [ ] NIC address
-
->Giải thích:    
->None 
-
-Câu 52. Máy tính A gửi cho máy tính B gói tin TCP thứ nhất có số thứ tự (sequence
-number) là 2000 và độ dài gói tin là 1000 byte, và gửi gói tin TCP thứ hai có số thứ
-tự là 3000 và độ dài gói tin là 200 byt- [ ] Tuy nhiên, máy tính B chỉ nhận được gói tin
-TCP thứ hai. Hỏi sau khi nhận gói tin TCP thứ hai, máy tính B gửi gói tin biên nhận
-ACK cho máy tính A với ACK bằng bao nhiêu?
-- [ ] 1000
-- [ ] 3200
-- [x] 2000
-- [ ] 3000
-
->Giải thích:    
->None 
-
-Câu 53. Bảng định tuyến của router A có các dòng được liệt kê như bên dưới, hãy
-cho biết nếu một gói tin có địa chỉ đích là 203.113.119.1 thì dòng nào sẽ được chọn
-để định tuyến cho gói tin đó
-- [ ] Destination 203.113.192.0/18 → Gateway 200.176.10.1
-- [x] Destination 203.113.64.0/18 → Gateway 113.57.10.1
-- [ ] Destination 203.113.128.0/17 → Gateway 14.8.10.1
-- [ ] Destination 203.113.0.0/16 → Gateway 193.168.10.1
 
 >Giải thích:    
 >None 
@@ -658,19 +602,10 @@ vector ?
 >None 
 
 Câu 57. Trong giao thức Go-Back-N có độ lớn cửa sổ là 6, A cần gửi các gói có số
-thứ tự từ 0 đến 6 tới - [ ] Gói 3 trên đường đến B bị lỗi nên không đến được, phải gửi
+thứ tự từ 0 đến 6 tới B. Gói 3 trên đường đến B bị lỗi nên không đến được, phải gửi
 lại 1 lần. Tính số gói (kể cả ACK từ B) mà A và B đã gửi cho nhau sau khi quá trình
 gửi kết thúc.  
 Ans: _21_
-
->Giải thích:    
->None 
-
-Câu 58. Dịch vụ nào chuyển đổi tên miền và hostname sang địa chỉ IP
-- [ ] Network Time Protocol (NTP)
-- [ ] Internet Relay Chat (IRC)
-- [ ] Routing Information Protocol (RIP)
-- [x] Domain Name System (DNS)
 
 >Giải thích:    
 >None 
@@ -700,17 +635,6 @@ Câu 61. Hub là thiết bị truyền tin?
 - [x] Quảng bá
 - [ ] Điểm tới điểm
 - [ ] Đa điểm.
-
->Giải thích:    
->None 
-
-Câu 62. Máy tính A gửi 1 gói tin IP cho máy tính B không nằm cùng một subnet. Hỏi
-khung tin (frame) của layer 2 chứa gói tin IP khi gửi đi sẽ có địa chỉ MAC đích là địa
-chỉ nào?
-- [x] Địa chỉ MAC của router
-- [ ] Địa chỉ MAC của máy tính A
-- [ ] Địa chỉ MAC FFFFFFFFFFF
-- [ ] Địa chỉ MAC của máy tính B
 
 >Giải thích:    
 >None 
@@ -866,25 +790,6 @@ chỉ mạng (subnet) của thiết bị là.
 >Giải thích:    
 >None 
 
-Câu 78. Trong mạng cục bộ Ethernet, điều nào sau đây là đúng?
-- [ ] Tín hiệu đụng độ được dùng để bổ trợ cho các khung tin với kích cỡ nhỏ
-- [x] Thời gian chờ thay đổi theo thuật toán exponential backoff làm giảm xác suất
-đụng độ khi truyền lại
-- [ ] Bên gửi dừng nghe đường truyền khi bắt đầu gửi khung tin
-- [ ] Bên gửi vẫn tiếp tục gửi khung tin sau khi nghe được đụng độ
-
->Giải thích:    
->None 
-
-Câu 79. Câu nào diễn đạt đúng về giao thức IP?
-- [ ] IP là giao thức tin cậy
-- [ ] IP là giao thức hướng nối (connection oriented)
-- [ ] IP là giao thức đảm bảo thời gian thực
-- [x] IP là giao thức không hướng nối (connectionless oriented)
-
->Giải thích:    
->None 
-
 Câu 80. Cho 2 byte dữ liệu dưới dạng mã hexa A0B1. Tính 3-bit CRC của 2 byte dữ
 liệu đó biết rằng CRC generator G dưới dạng nhị phân là 1001.  
 Ans: _110_
@@ -892,49 +797,12 @@ Ans: _110_
 >Giải thích:    
 >None 
 
-Câu 81. Khi Bob gửi e-mail cho Alice, máy tính của Alice không kết nối mạn- [ ] Khi
+Câu 81. Khi Bob gửi e-mail cho Alice, máy tính của Alice không kết nối mạng. Khi
 đó, email của Bob sẽ nằm ở đâu?
 - [x] Trong mail box của Alice trên mail server của Alice
 - [ ] Trong hàng thư chờ gửi trên mail server của Bob
 - [ ] Trong hàng thư chờ gửi trên mail server của Alice
 - [ ] Trong mail box của Bob trên mail server của Bob
-
->Giải thích:    
->None 
-
-Câu 82. Thiết bị kết nối mạng nào cho phép nhiều nút đồng thời cũng gửi và nhận
-trên các segment mạng khác nhau
-- [ ] Hub
-- [x] Switch
-- [ ] Amplifier
-- [ ] Repeater
-
->Giải thích:    
->None 
-
-Câu 83 - 84: Một gói tin có kích thước 2000 bytes được truyền giữa hai máy tính
-trong mạng LAN. Biết khoảng cách vật lý giữa 2 máy tính là 400m, băng thông trong
-mạng LAN là 100 Mbps. Biết vận tốc lan. truyền tín hiệu trong mạng LAN là 2x10^8
-m/s.
-
->Giải thích:    
->None 
-
-Câu 83. Thời gian truyền dữ liệu (transmission time) vào mạng LAN là bao nhiêu?
-- [ ] 0.00001 s
-- [x] 0.00016 s
-- [ ] 0.00002 s
-- [ ] 0.00008 s
-
->Giải thích:    
->None 
-
-Câu 84. Thời gian lan truyền (propagation time) của gói tin giữa hai máy tính là bao
-nhiêu?
-- [ ] 0.00004 s
-- [ ] 0.000016 s
-- [x] 0.000002 s
-- [ ] 0.00001 s
 
 >Giải thích:    
 >None 
@@ -949,45 +817,11 @@ Câu 85. Loại địa chỉ nào trên máy tính đầu cuối mà ứng dụn
 >Giải thích:    
 >None 
 
-Câu 86. Cho 2 byte dữ liệu dưới dạng mã hexa A0B1. Tính 3-bit CRC của 2 byte dữ
-liệu đó biết rằng CRC generator G dưới dạng nhị phân là 1001.  
-Ans: _110_
-
->Giải thích:    
->None 
-
-Câu 87. Hub là thiết bị truyền tin?
-- [ ] Điểm tới điểm
-- [ ] Đa điểm
-- [ ] Cả ba lựa chọn kia
-- [x] Quảng bá
-
->Giải thích:    
->None 
-
-Câu 88. Câu nào diễn đạt đúng về switch?
-- [x] tạo ra nhiều miền collision và một miền broadcast
-- [ ] tạo ra nhiều miền collision và nhiều miền broadcast
-- [ ] tạo ra một miền collision và nhiều miền broadcast
-- [ ] tạo ra môṭmiền collision và môṭmiền broadcast
-
->Giải thích:    
->None 
-
 Câu 89. Câu nói nào là đúng?
 - [ ] Subnet mask chỉ được sử dụng ở lớp địa chỉ (class) A và B
 - [x] Các máy tính đầu cuối luôn có subnet mask
 - [ ] Subnet mask được gán cho các thiết bị ở lớp địa chỉ (class) A
 - [ ] Các thiết bị được gán cho một subnet mask chỉ khi chúng thuộc về cùng một mạng con
-
->Giải thích:    
->None 
-
-Câu 90. Câu nào diễn đạt đúng về giao thức IP?
-- [ ] IP là giao thức đảm bảo thời gian thực
-- [ ] IP là giao thức tin cậy
-- [ ] IP là giao thức hướng nối (connection oriented)
-- [x] IP là giao thức không hướng nối (connectionless oriented)
 
 >Giải thích:    
 >None 
@@ -1001,122 +835,11 @@ Câu 91. Khi Bob gửi email cho Alice, máy tính của Alice không kết nố
 >Giải thích:    
 >None 
 
-Câu 92. Trong mạng cục bộ Ethernet, điều nào sau đây là đúng?
-- [ ] Bên gửi vẫn tiếp tục gửi khung tin sau khi nghe được đụng độ
-- [ ] Bên gửi dừng nghe đường truyền khi bắt đầu gửi khung tin
-- [ ] Tín hiệu đụng độ được dùng để bổ trợ cho các khung tin với kích cỡ nhỏ
-- [x] Thời gian chờ thay đổi theo thuật toán exponential backoff làm giảm xác suất đụng độ khi truyền lại
-
->Giải thích:    
->None 
-
-Câu 93. Được biết ngưỡng (threshold) hiện tại của quá trình kiểm soát tắc nghẽn là 16, hãy xác định giá trị của cửa sổ chống tắc nghẽn (congwin) khi bên gửi đã gửi tổng số 35 segment và nhận đầy đủ số ACK trả về mà không có bất kỳ lỗi nào 
-- [ ] 19
-- [ ] 18
-- [ ] 16
-- [x] 17
-
->Giải thích:    
->None 
-
-Câu 94. Địa chỉ IP của máy tính A là 110.2.112.12/20, địa chỉ IP của máy tính X là 110.2.109.4/20 và địa chỉ IP của máy tính Y là 110.2.105.20/20. Những máy tính nào có cùng địa chỉ mạng (subnet)?
-- [x] Máy tính X và máy tính Y
-- [ ] Máy tính X và máy tính A
-- [ ] Cả 3 máy tính
-- [ ] Máy tính A và máy tính Y
-
->Giải thích:    
->None 
-
-Câu 95. Một con số 32 bit, được sử dụng cùng địa chỉ IP của thiết bị để xác định địa
-chỉ mạng (subnet) của thiết bị là
-- [x] subnet mask
-- [ ] ARP address
-- [ ] DNS mask
-- [ ] MAC address
-
->Giải thích:    
->None 
-
-Câu 96. Máy tính A gửi 1 gói tin IP cho máy tính B không nằm cùng một subnet. Hỏi
-khung tin (frame) của layer 2 chứa gói tin IP khi gửi đi sẽ có địa chỉ MAC đích là địa
-chỉ nào?
-- [ ] Địa chỉ MAC của máy tính B
-- [ ] Địa chỉ MAC của máy tính A
-- [x] Địa chỉ MAC của router
-- [ ] Địa chỉ MAC FF-FF-FF-FF
-
->Giải thích:    
->None 
-
-Câu 97. Giao thức UDP thường được dùng với ứng dụng nào sau đây?
-- [ ] Ứng dụng thư điện tử
-- [ ] Ứng dụng Web
-- [ ] Ứng dụng truyền file
-- [x] Ứng dụng nói chuyện trực tuyến (voice chat)
-
->Giải thích:    
->None 
-
 Câu 98. Máy tính A gửi cho máy tính B gói tin TCP thứ nhất có số thứ tự (sequence number) là 2000 và độ dài gói tin là 1000 byte, và gửi gói tin TCP thứ hai có số thứ tự là 3000 và độ dài gói tin là 200 byt- [ ] Tuy nhiên, máy tính B chỉ nhận được gói tin TCP thứ hai. Hỏi sau khi nhận gói tin TCP thứ hai, máy tính B gửi gói tin biên nhận ACK cho máy tính A với ACK bằng bao nhiêu?
 - [ ] 3000
 - [ ] 3200
 - [x] 2000
 - [ ] 1000
-
->Giải thích:    
->None 
-
-Câu 99. Một mạng LAN hình trạng bus có chiều dài 2km. Tốc độ lan truyền tín hiệu trên dây là 2 × 10 ^ 8 m/s. Mạng sử dụng CSMA/CD để truy nhập đường truyền và có tốc độ truyền dữ liệu là 10 ^ 7 bps . Trong CSMA/CD, người ta sử dụng cơ chế nghe đường truyền để phát hiện đụng độ (collision detection) trong khi vẫn đang truyền tin. Để máy phát hiện đụng độ trong khi truyền, thì tín hiệu sau khi đụng độ lại tiếp tục được truyền đi tiếp rồi quay lại máy đang truyền trong khoảng thời gian máy đang truyền tin. Trường hợp xấu nhất để máy truyền tín hiệu và tín hiệu lại quay trở về máy là hai lần khoảng thời gian lan truyền tín hiệu trong mạn- [ ] Khoảng thời gian này tương đương với việc máy truyền từ bit đầu tiên đến bit cuối cùng của khung tin. Như vậy, để đảm bảo mọi đụng độ đều có thể được phát hiện trong khi máy đang truyền tin thì kích cỡ nhỏ nhất của khung tin được sử dụng trong mạng LAN này nên là ?
-- [ ] 50 bytes
-- [ ] 100 bytes
-- [ ] 200 bytes
-- [x] 25 bytes
-
->Giải thích:    
->None 
-
-Câu 100. Điều nào sau đây đúng với giao thức định tuyến theo thuật toán distance vector ?
-- [ ] Các bộ định tuyến trao đổi bảng định tuyến với nhau
-- [x] Các bộ định tuyến trao đổi distance vector với các nút lân cận (neighbour node)
-- [ ] Các bộ định tuyến không trao đổi thông tin với nhau
-- [ ] Các bộ định tuyến sử dụng bảng định tuyến tĩnh
-
->Giải thích:    
->None 
-
-Câu 101. Trong giao thức CSMA/CD, nếu 2 máy tính cùng đồng thời truyền 2 khung tin vào môi trường truyền thì 2 máy tính này sẽ
-- [ ] Tăng mức năng lượng của tín hiệu truyền để giảm nguy cơ bị lỗi do xung đột xảy ra
-- [x] Phát hiện được xung đột và ngừng truyền dữ liệu ngay lập tức
-- [ ] Gửi cảnh báo xung đột cho nhau và tiếp tục truyền
-- [ ] Chỉ phát hiện được xung đột sau khi nhận được gói tin biên nhận ACK
-
->Giải thích:    
->None 
-
-Câu 102. Dịch vụ nào chuyển đổi tên miền và hostname sang địa chỉ IP
-- [ ] Routing Information Protocol (RIP)
-- [ ] Internet Relay Chat (IRC)
-- [x] Domain Name System (DNS)
-- [ ] Network Time Protocol (NTP)
-
->Giải thích:    
->None 
-
-Câu 103. Khi một gói tin rời khỏi mạng, Router NAT thay thế địa chỉ nguồn của gói tin đó bằng
-- [ ] Địa chỉ port đích
-- [ ] Không đáp án nào đúng
-- [ ] Địa chỉ IP đích
-- [x] Địa chỉ IP của NAT router
-
->Giải thích:    
->None 
-
-Câu 104. Bảng định tuyến của router A có các dòng được liệt kê như bên dưới, hãy cho biết nếu một gói tin có địa chỉ đích là 203.113.119.1 thì dòng nào sẽ được chọn để định tuyến cho gói tin đó
-- [ ] Destination 203.113.0.0/16 → Gateway 193.168.10.1
-- [x] Destination 203.113.64.0/18 → Gateway 113.57.10.1
-- [ ] Destination 203.113.192.0/18 → Gateway 200.176.10.1
-- [ ] Destination 203.113.128.0/17 → Gateway 14.8.10.1
 
 >Giải thích:    
 >None 
@@ -1285,38 +1008,11 @@ Câu 121. Giao thức tự động gán địa chỉ IP cho máy tính
 >Giải thích:    
 >None 
 
-Câu 122. Chọn một phát biểu chính xác nhất
-- [ ] OSPF là Inter-domain routing
-- [x] Routing trên mạng Internet là kết hợp của các giao thức Inter-domain and Intra-domain
-- [ ] RIP là giao thức routing phân cấp (hierarchical routing protocol)
-- [ ] Giao thức định tuyến BGP sử dụng thuật toán routing Dijsktra
-
->Giải thích:    
->None 
-
-Câu 123. Máy tính A gửi 1 gói tin IP cho máy tính B không nằm cùng một subnet. Hỏi khung tin (frame) của layer 2 chứa gói tin IP khi gửi đi sẽ có địa chỉ MAC đích là địa chỉ nào?
-- [x] Địa chỉ MAC của router
-- [ ] Địa chỉ MAC FFFFFFFFFFF
-- [ ] Địa chỉ MAC của máy tính B
-- [ ] Địa chỉ MAC của máy tính A
-
->Giải thích:    
->None 
-
 Câu 124. Tầng phiên (Session) nhận dịch vụ từ tầng ... và sử dụng dịch vụ của tầng ......
 - [x] presentation, transport
 - [ ] application, presentation
 - [ ] presentation, data link
 - [ ] transport, network
-
->Giải thích:    
->None 
-
-Câu 125. Máy tính A gửi cho máy tính B một gói tin TCP thứ nhất có kích thước 200 byte và số thứ tự 120 và gói tin TCP thứ hai có kích thước 200 byt- [ ] Gói tin TCP thứ 2 đến trước và được lưu vào buffer, gói tin TCP thứ nhất đến sau. Hỏi sau khi nhận gói tin thứ nhất, máy tính B sẽ trả về gói tin ACK có sổ ACK (acknowledge number) là bao nhiêu?
-- [ ] 420
-- [ ] 122
-- [ ] 320
-- [x] 520
 
 >Giải thích:    
 >None 
@@ -1437,12 +1133,6 @@ Câu 136. Trong mạng cục bộ Ethernet, điều nào sau đây là đúng?
 >Giải thích:    
 >None 
 
-Câu 137. Trên một mạng chuyển mạch gói, có một route (path) trải dài qua 3 kết nối vật lý (3 links). Trên route đó một file kích thước 1KBytes được gửi từ nút nguồn đến nút đích. Giả thiết rằng: (1) băng thông của tất cả các kết nối vật lý là 1Mbps; (2) trễ lan truyền tín hiệu (propagation delay) và trễ hàng đợi (queuing delay) là rất nhỏ; (3) đơn vị truyền dữ liệu của mạng là các gói tin bằng nhau kích thước 1000 byte; (4) Bỏ qua overhead của tất cả các giao thức sử dụng. Hỏi: Thời gian cần thiết để  truyền toàn bộ file đến đích là bao nhiêu miliseconds?  
-Ans: _24_
-
->Giải thích:    
->None 
-
 Câu 138. Liên quan đến giao thức HTTP, hãy đánh dấu đúng sai vào các câu sau:
 - [x] Header của bản tin HTTP có thể mang dữ liệu dạng nhị phân
 - [x] Có hai bản tin HTTP là HTTP request và HTTP reply
@@ -1471,15 +1161,6 @@ Câu 140. Ba hình trang mạng được dùng phổ biến để nối kết c�
 - [ ] Star with Switch và Star
 - [x] Ring và Bus
 - [ ] Star with Switch
-
->Giải thích:    
->None 
-
-Câu 141. Trong kiến trúc giao thức TCP/IP, tầng giao vận sử dụng dịch vụ gì của tầng mạng?
-- [ ] Đảm bảo các gói tin đến bên nhận mà không có lỗi hoặc mất mát gói tin
-- [ ] Đảm bảo các gói tin được truyền đến đúng tiến trình của bên nhận
-- [ ] Đảm bảo không có tắc nghẽn trong mạng
-- [x] Định tuyến gói tin đến đúng địa chỉ IP của bên nhận
 
 >Giải thích:    
 >None 
@@ -1515,15 +1196,6 @@ Câu 144. Mạng Internet so các mạng điện thoại truyền thống (cố 
 >Giải thích:    
 >None 
 
-Câu 145. Máy tính A gửi cho máy tính B gói tin TCP thứ nhất có số thứ tự (sequence number) là 2000 và độ dài gói tin là 1000 byte, và gửi gói tin TCP thứ hai có số thứ tự là 3000 và độ dài gói tin là 200 byt- [ ] Tuy nhiên, máy tính B chỉ nhận được gói tin TCP thứ hai. Hỏi sau khi nhận gói tin TCP thứ hai, máy tính B gửi gói tin biên nhận ACK cho máy tính A với ACK bằng bao nhiêu?
-- [ ] 3200
-- [ ] 1000
-- [ ] 3000
-- [x] 2000
-
->Giải thích:    
->None 
-
 Câu 146. Lợi ích của việc mạng nội bộ dùng NAT là
 - [ ] NAT giúp việc gán địa chỉ IP cho từng thiết bị nhanh hơn.
 - [x] Chỉ cần sử dụng một địa chỉ IP cho tất cả các thiết bị trong mạng
@@ -1542,15 +1214,6 @@ Câu 147. Ưu điểm của thiết bị hub so với thiết bị switch (layer
 >Giải thích:    
 >None 
 
-Câu 148. Địa chỉ IP loopback là
-- [ ] 255.255.255.255
-- [x] 127.0.0.1
-- [ ] 192.168.1.1
-- [ ] 10.10.10.10
-
->Giải thích:    
->None 
-
 Câu 149. Chọn ý đúng trong các diễn đạt dưới đây về cơ chế store-and-forward ở router
 - [ ] Gói tin được forward theo từng byte, cứ byte nào vào thì forward by đó ra
 - [ ] Chỉ cần header của gói tin đến router là có thể forward gói tin đi tiếp luôn
@@ -1565,15 +1228,6 @@ Câu 150. Bộ giao thức truyền dữ liệu qua Internet là?
 - [ ] DNS
 - [ ] HTTP
 - [x] TCP/IP
-
->Giải thích:    
->None 
-
-Câu 152. Tại sao giao thức HTTP lại sử dụng giao thức TCP mà không sử dụng giao thức UDP để truyền dữ liệu?
-- [ ] Giao thức TCP có độ trễ thấp hơn
-- [ ] Giao thức TCP có tốc độ truyền cao hơn
-- [ ] Giao thức TCP có cơ chế truyền dữ liệu đơn giản, ít dư thừa hơn
-- [x] Giao thức TCP đảm bảo truyền tin tin cậy.
 
 >Giải thích:    
 >None 
@@ -1827,16 +1481,6 @@ Câu 178. Khi Bob gửi mail đến Alice, giao thức SMTP được sử dụng
 >Giải thích:    
 >None 
 
-Câu 179. Trong một mạng LAN có cài đặt một switch nối với một router. Router được tích hợp chức năng DHCP và DNS. Một máy tính (máy C) được cấu hình sử dụng DHCP được bật lên và cắm vào switch của mạn- [ ] Ngay sau khi máy C được cấp phát thành công một địa chỉ IP, C thực hiện một câu truy vấn tên miền www.vnexpress.net đến máy chủ DNS nội bộ của mạng LAN. Giả sử rằng tên miền www.vnexpress.net đã được cache tại máy chủ DNS nội bộ. 
-Hỏi: Câu nào chính xác nhất trong các phát biểu dưới đây?
-- [ ] Sau khi máy C cắm vào switch, DHCP được kích hoạt chạy bên trên UDP, sau đó ARP được kích hoạt ở lớp datalink, sau đó DNS chạy ở tầng ứng dụng để có được tên miền www.vnexpress.net
-- [ ] Sau khi máy C cắm vào switch, ARP được kích hoạt ở lớp datalink, sau đó DHCP được kích hoạt, sau đó DNS được kích hoạt ở tầng ứng dụng
-- [ ] Sau khi máy C cắm vào switch, DNS được kích hoạt ở tầng ứng dụng, sau đó DHCP được kích hoạt sử dụng UDP ở tầng giao vận, sau đó ARP được kích hoạt ở tầng datalink
-- [ ] Sau khi máy C cắm vào switch, DHCP được kích hoạt, sau đó DNS được kích hoạt ở tầng ứng dụng khiến cho ARP được kích hoạt ở tầng datalink. 
-
->Giải thích:    
->None 
-
 Câu 180. Bảng thông tin chuyển tiếp của một bộ định tuyến như sau. Bộ định tuyến nhận được ba gói tin IPv4 từ máy 10.10.10.1 gửi lần lượt đến các máy 192.168.1.1, 172.16.2.9, 172.5.16.1. Khi đó các gói tin này sẽ được gửi tới các cổng ra tương ứng của bộ định tuyến: 
 
 |Destination |Output port|
@@ -1928,15 +1572,6 @@ Câu 188. Chọn một phát biểu chính xác nhất
 - [ ] OSPF là Inter-domain routing
 - [ ] Giao thức định tuyến BGP sử dụng thuật toán routing Dijkstra
 - [x] Routing trên mạng Internet là kết hợp của các giao thức Inter-domain and Intra-domain
-
->Giải thích:    
->None 
-
-Câu 189. Frame là dữ liệu được trao đổi ở tầng
-- [ ] Network
-- [x] Datalink
-- [ ] Transport
-- [ ] Physical
 
 >Giải thích:    
 >None 
@@ -2052,24 +1687,6 @@ Câu 202. Mạng máy tính là
 >Giải thích:    
 >None 
 
-Câu 203. Trong các phát biểu sau về kiến trúc Client-Server, câu nào kém chính xác nhất
-- [ ] Server thường phải có địa chỉ và port cố định
-- [ ] Client-Server hoạt động dựa chủ yếu dựa trên cơ chế request/reply
-- [ ] Client có thể gửi bản tin Request đến server
-- [x] Client có thể không là bên bắt đầu quá trình liên lạc
-
->Giải thích:    
->None 
-
-Câu 204. OSPF là giao thức nào dưới đây?
-- [ ] Giao thức định tuyến giữa các miền tự trị (inter AS)
-- [ ] Giao thức định tuyến trong mạng LAN
-- [ ] Giao thức định tuyến trong mạng chuyển mạch ảo (Virtual circuit routing)
-- [x] Giao thức định tuyến trong miền tự trị (intra AS)
-
->Giải thích:    
->None 
-
 Câu 205. Máy tính A gửi cho máy tính B một gói tin TCP thứ nhất có kích thước 200 byte và số thứ tự 120 và gói tin TCP thứ hai có kích thước 200 byte. Gói tin TCP thứ 2 đến trước và được lưu vào buffer, gói tin TCP thứ nhất đến sau. Hỏi sau khi nhận gói tin thứ nhất, máy tính B sẽ trả về gói tin ACK có số ACK (acknowledge number) là bao nhiêu?
 - [ ] 320
 - [ ] 122
@@ -2114,34 +1731,6 @@ Câu 209. Hãy tìm câu trả lời đúng nhất liên quan đến HTTP
 >Giải thích:    
 >None 
 
-Câu 210. Trong một gói tin TCP (TCP segment), giá trị ACK number và Sequence Number là các số đếm, phản ánh:
-- [x] Số thứ tự (tính theo byte) đang chờ nhận, và số thứ tự tính theo byte, của byte đầu tiên của gói tin đang được truyền
-- [ ] Không phải A, C, D
-- [ ] Số thứ tự gói tin (tính theo segment) đang chờ nhận, và số thứ tự gói tin (segment) đang được truyền
-- [ ] Giá trị cửa sổ nhận và giá trị cửa sổ truyền
-
->Giải thích:    
->None 
-
-Câu 211. Được biết ngưỡng (threshold) hiện tại của quá trình kiểm soát tắc nghẽn là 16, hãy xác định giá trị của cửa sổ chống tắc nghẽn (congwin) khi bên gửi đã gửi tổng số 35 segment và nhận đầy đủ số ACK trả về mà không có bất kỳ lỗi nào 
-- [ ] 19
-- [ ] 18
-- [ ] 16
-- [x] 17
-
->Giải thích:    
->None 
-
-Câu 212. Thiết bị kết nối mạng nào cho phép nhiều nút đồng thời cùng gửi và nhận
-trên các segment mạng khác nhau
-- [ ] Amplifier
-- [ ] Hub
-- [ ] Repeater
-- [x] Switch
-
->Giải thích:    
->None 
-
 Câu 213. Các phát biểu dưới đây là đúng hay sai
 - [ ] FTP sử dụng giao thức UDP
 - [ ] DNS sử dụng giao thức TCP
@@ -2151,54 +1740,9 @@ Câu 213. Các phát biểu dưới đây là đúng hay sai
 >Giải thích:    
 >None 
 
-Câu 214. Chọn ý đúng trong các diễn đạt dưới đây về cơ chế store-and-forward ở router
-- [ ] Gói tin được forward theo từng byte, cứ byte nào vào thì forward by đó ra
-- [ ] Cứ bit nào vào là có thể forward bit đó ra luôn
-- [x] Toàn bộ gói tin phải đến router trước khi nó có thể được forward đi tiếp
-- [ ] Chỉ cần header của gói tin đến router là có thể forward gói tin đi tiếp luôn
-
->Giải thích:    
->None 
-
-Câu 215. Trong mạng cục bộ Ethernet, điều nào sau đây là đúng?
-- [ ] Bên gửi vẫn tiếp tục gửi khung tin sau khi nghe được đụng độ
-- [x] Thời gian chờ thay đổi theo thuật toán exponential backoff làm giảm xác suất đụng độ khi truyền lại
-- [ ] Tín hiệu đụng độ được dùng để bổ trợ cho các khung tin với kích cỡ nhỏ
-- [ ] Bên gửi dừng nghe đường truyền khi bắt đầu gửi khung tin
-
->Giải thích:    
->None 
-
 Câu 216. Với lập trình socket, người lập trình không quan tâm việc Hệ điều hành sử dụng giao thức giao vận TCP hay UDP như thế nào. Đúng hay sai?
 - [x] Sai
 - [ ] Đúng
-
->Giải thích:    
->None 
-
-Câu 217. Giao thức UDP thường được dùng với ứng dụng nào sau đây?
-- [ ] Ứng dụng Web
-- [ ] Ứng dụng thư điện tử
-- [x] Ứng dụng nói chuyện trực tuyến (voice chat)
-- [ ] Ứng dụng truyền file
-
->Giải thích:    
->None 
-
-Câu 218. Phát biểu nào dưới đây không đúng về thiết bị switch
-- [ ] Switch hoạt động theo cơ chế store và forward
-- [ ] Switch sử dụng forwarding table để forward frame
-- [x] Switch hoạt động ở tầng vật lý
-- [ ] Switch xây dựng forwarding table theo cơ chế tự học
-
->Giải thích:    
->None 
-
-Câu 219. Máy tính A và B truyền dữ liệu qua giao thức TCP. Khi máy tính A nhận định có tắc nghẽn xảy ra trong mạng, máy tính A sẽ
-- [x] Giảm tốc độ truyền dữ liệu bằng cách giảm kích thước cửa sổ gửi
-- [ ] Dừng gửi dữ liệu cho đến khi router báo hết tắc nghẽn
-- [ ] Dừng gửi dữ liệu cho đến khi máy tính B gửi gói tin ACK báo hết tắc nghẽn
-- [ ] Tăng tốc độ truyền dữ liệu để bù lại lượng dữ liệu mất mát do tắc nghẽn
 
 >Giải thích:    
 >None 
@@ -2221,38 +1765,11 @@ Câu 221. Một gói tin IP sau khi gửi có thể không đến được bên 
 >Giải thích:    
 >None 
 
-Câu 222. Dữ liệu khi truyền từ máy tính A và máy tính B cần đi qua 3 đường truyền vật lý có băng thông lần lượt là 10Mbps, 20Mbps và 30 Mbps. Hỏi tốc độ truyền dữ liệu tối đa giữa A và B là bao nhiêu?
-- [ ] 30Mbps
-- [x] 10Mbps
-- [ ] Không đáp án nào trong 3 đáp án B, D và A là đúng
-- [ ] 20Mbps
-
->Giải thích:    
->None 
-
 Câu 223. Tầng datalink sử dụng .... để chuyển gói tin đến đích
 - [ ] Địa chỉ IP
 - [ ] Cổng
 - [ ] Tên máy tính
 - [x] Địa chỉ MAC
-
->Giải thích:    
->None 
-
-Câu 224. Core network của mạng Internet sử dụng cơ chế
-- [ ] Circuit switching
-- [ ] Datagram switching
-- [x] Packet switching
-- [ ] Label switching
-
->Giải thích:    
->None 
-
-Câu 225. Tốc độ của Gigabit Ethernet là bao nhiêu
-- [ ] 10 Mb/s
-- [ ] 1 Mb/s
-- [ ] 100 Mb/s
-- [x] 1000 Mb/s
 
 >Giải thích:    
 >None 
