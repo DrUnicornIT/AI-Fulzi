@@ -958,7 +958,7 @@ Câu 85. Khi sử dụng giao thức TCP, điều gì xảy ra nếu giá trị 
 >None 
 
 Câu 86. Các diễn đạt dưới đây về phương pháp xác định lỗi bít "single bit parity" ở tầng liên kết là "Đúng" hay "Sai"
-- [x] Bit 1 được thêm vào cuối cùng sao cho tổng số bit 1 thu được là số lẻ
+- [ ] Bit 1 được thêm vào cuối cùng sao cho tổng số bit 1 thu được là số lẻ
 - [ ] Bit 0 được thêm vào đầu sao cho tổng số bit 0 tạo thành là số lẻ
 - [x] Bit 1 được thêm vào cuối cùng sao cho tổng số bit 1 thu được là số chẵn
 - [ ] Bit 0 được thêm vào đầu sao cho tổng số bit 0 tạo thành là số chẵn
