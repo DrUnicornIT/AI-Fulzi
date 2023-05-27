@@ -1,6 +1,6 @@
 @font-face {
   font-family: "ChalkSE";
-  src: url("../.././fonts/2157-font.otf") format("opentype");
+  src: url("../.././fonts/Cambria.ttf") format("opentype");
 }
 strong {
   color: hsl(4, 90%, 61%);
