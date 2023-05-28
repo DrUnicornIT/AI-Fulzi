@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listmd/soft-ware.md",
+                "file": "listmd/computer-netword-note.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listmd/soft-ware.md",
+                "file": "listmd/computer-netword-note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listmd/soft-ware.md",
+                "file": "listmd/computer-netword-note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listmd/soft-ware.md"
+                "file": "listmd/computer-netword-note.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "f7c38e76b485f8df",
   "lastOpenFiles": [
+    "_posts/2023-05-26-course-uet.md",
+    "listmd/computer-netword-note.md",
     "listmd/computer-network.md",
     "listmd/soft-ware.md",
     "_site/fonts/Cambria.ttf",
