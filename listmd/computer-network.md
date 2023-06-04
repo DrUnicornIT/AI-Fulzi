@@ -624,9 +624,9 @@ Ans: _21_
 Câu 52. Được biết ngưỡng (threshold) hiện tại của quá trình kiểm soát tắc nghẽn là
 16, hãy xác định giá trị của cửa sổ chống tắc nghẽn (congwin) khi bên gửi đã gửi
 tổng số 35 segment và nhận đầy đủ số ACK trả về mà không có bất kỳ lỗi nào
-- [ ] 17
+- [x] 17
 - [ ] 18
-- [x] 16
+- [ ] 16
 - [ ] 19
 
 >Giải thích:     
